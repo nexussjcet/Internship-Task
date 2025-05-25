@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackSphere 2025 - Code. Create. Conquer.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #0a0a0a;
+            overflow-x: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%);
+            animation: backgroundMove 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundMove {
+
+            0%,
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-20px) translateY(-10px);
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            opacity: 1;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            opacity: 1;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .event-details {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            opacity: 1;
+            animation: fadeInUp 1s ease-out 1.5s both;
+        }
+
+        .cta-button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            opacity: 1;
+            animation: fadeInUp 1s ease-out 2s both;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stats {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            max-width: 800px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            opacity: 1;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .stat-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .stat-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .stat-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about {
+            padding: 80px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: #0d1b2a;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 30px;
+            position: relative;
+            opacity: 1;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .about h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: block;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #cccccc;
+            line-height: 1.8;
+            opacity: 1;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .about p:first-of-type {
+            animation-delay: 0.2s;
+        }
+
+        .about p:last-of-type {
+            animation-delay: 0.4s;
+        }
+
+        .features {
+            background: linear-gradient(to bottom, #0d1b2a 0%, #1b263b 50%, #0f172a 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            opacity: 1;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            padding: 30px 20px;
+            background: rgba(30, 58, 138, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            opacity: 1;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .feature-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .feature-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .feature-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            background: rgba(30, 58, 138, 0.25);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ff6b6b;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #333;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .event-details {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+
+            .about h2,
+            .features h2 {
+                font-size: 2rem;
+            }
+
+            .about,
+            .features {
+                padding: 60px 15px;
+            }
+
+            .stats-container {
+                gap: 40px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>HackSphere 2025</h1>
+        <p class="tagline">Code. Create. Conquer.</p>
+        <p class="event-details">June 20–22, 2025 – Online</p>
+        <button class="cta-button">Register Now</button>
+    </section>
+
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">5000+</span>
+                <span class="stat-label">Participants</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">48</span>
+                <span class="stat-label">Hours</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">$50K</span>
+                <span class="stat-label">In Prizes</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About HackSphere 2025</h2>
+        <p>Join thousands of developers, designers, and creators from around the world in the ultimate 48-hour coding
+            challenge. HackSphere 2025 is where innovation meets collaboration, bringing together brilliant minds to
+            solve real-world problems.</p>
+        <p>Whether you're a seasoned developer or just starting your coding journey, HackSphere offers the perfect
+            platform to learn, network, and showcase your skills. Build amazing projects, win exciting prizes, and be
+            part of the global tech community.</p>
+    </section>
+
+    <section class="features">
+        <h2>Why Join HackSphere?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <span class="feature-icon">💻</span>
+                <h3 class="feature-title">Learn & Grow</h3>
+                <p class="feature-description">Access workshops, mentorship, and cutting-edge tech resources to expand
+                    your skills.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🌍</span>
+                <h3 class="feature-title">Global Network</h3>
+                <p class="feature-description">Connect with developers, designers, and entrepreneurs from over 100
+                    countries.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🏆</span>
+                <h3 class="feature-title">Win Big</h3>
+                <p class="feature-description">Compete for $50K in prizes, internships, and startup funding
+                    opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 HackSphere. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
