@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HackSphere 2025</title>
-  <!-- Orbitron: Futuristic Tech/Game Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     :root {
       --primary: #00d4ff;
       --primary-dark: #00b3cc;
@@ -27,6 +29,40 @@
       min-height: 100vh;
       letter-spacing: 0.5px;
     }
+    nav {
+      width: 100%;
+      background: rgba(18, 21, 28, 0.96);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,212,255,0.06);
+      padding: 0 0;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 12px;
+    }
+    nav a {
+      color: var(--neon);
+      text-decoration: none;
+      font-family: 'Orbitron', Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 22px;
+      letter-spacing: 1.5px;
+      transition: color 0.2s;
+      text-transform: uppercase;
+      padding: 6px 0;
+      position: relative;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
     .hero {
       background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       min-height: 60vh;
@@ -34,6 +70,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      margin-top: 58px;
     }
     .hero-content {
       background: rgba(18, 21, 28, 0.82);
@@ -163,7 +200,94 @@
       box-shadow: 0 -4px 16px rgba(0,57,77,0.05);
       font-family: 'Orbitron', Arial, sans-serif;
     }
+   
+    .schedule-list, .partners-list {
+      list-style-type: none;
+      padding-left: 0;
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #b2ffff;
+    }
+    .schedule-list li, .partners-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+      font-family: 'Orbitron', Arial, sans-serif;
+    }
+    .partners-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 34px;
+      margin: 24px 0 0 0;
+    }
+    .partners-logos img {
+      height: 48px;
+      width: auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 8px 16px;
+      box-shadow: 0 2px 8px rgba(0,212,255,0.08);
+      margin-bottom: 10px;
+      transition: transform 0.2s;
+      max-width: 120px;
+      object-fit: contain;
+    }
+    .partners-logos img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 18px var(--primary);
+    }
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+      color: var(--neon);
+      font-family: 'Orbitron', Arial, sans-serif;
+      letter-spacing: 1px;
+      font-size: 16px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      border: 1.5px solid #222b3c;
+      background: rgba(18,21,28,0.6);
+      color: var(--white);
+      font-family: 'Orbitron', Arial, sans-serif;
+      font-size: 16px;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: var(--primary);
+      border: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #12151c;
+      font-family: 'Orbitron', Arial, sans-serif;
+      letter-spacing: 1.5px;
+      font-size: 18px;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: var(--primary-dark);
+    }
     @media (max-width: 700px) {
+      .nav-container {
+        flex-direction: column;
+        padding: 8px 2px;
+      }
+      nav a {
+        margin: 4px 10px;
+        font-size: 15px;
+      }
       .hero-content {
         padding: 36px 10px;
       }
@@ -182,51 +306,155 @@
       .faq-item {
         padding: 12px 8px;
       }
+      .schedule-list li, .partners-list li {
+        font-size: 16px;
+      }
+      .partners-logos {
+        gap: 16px;
+      }
+      .partners-logos img {
+        height: 34px;
+        padding: 6px 8px;
+        max-width: 80px;
+      }
+      .contact-form label, .contact-form input, .contact-form textarea {
+        font-size: 14px;
+      }
+      .contact-form button {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
+  <nav>
+    <div class="nav-container">
+      <a href="#about">About</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#partners">Partners</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero" id="home">
     <div class="hero-content">
       <h1>HackSphere 2025</h1>
       <p><em>Code. Create. Conquer.</em></p>
-      <div class="date">June 20–22, 2025 &mdash; Online</div>
-      <button>Register Now</button>
+      <div class="date">June 20-22, 2025</div>
+      <a href="#contact"><button>Register Now</button></a>
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="about">
     <h2>About HackSphere</h2>
     <p>
-      <strong>HackSphere 2025</strong> is a global 48-hour hackathon uniting developers, designers, and creators from every corner of the world. Whether you’re a beginner or a seasoned pro, this is your moment to shine.
+      HackSphere 2025 is the ultimate hackathon for innovators, coders, designers, and dreamers. 
+      Join 300+ participants as you build, learn, and compete for amazing prizes over three electrifying days!
     </p>
     <p>
-      Join us for a weekend of innovation, collaboration, and creativity. Let’s build something extraordinary—together.
+      Whether you're a beginner or a seasoned hacker, HackSphere is your gateway to networking, mentorship, and tech stardom.
     </p>
   </div>
 
-  <div class="section">
-    <h2>FAQs</h2>
+  <div class="section" id="schedule">
+    <h2>Schedule</h2>
+    <ul class="schedule-list">
+      <li><b>June 20, 9:00 AM</b> — Opening Ceremony & Team Formation</li>
+      <li><b>June 20, 11:00 AM</b> — Hacking Begins</li>
+      <li><b>June 21, 2:00 PM</b> — Workshops & Mentoring Sessions</li>
+      <li><b>June 22, 10:00 AM</b> — Project Submissions</li>
+      <li><b>June 22, 1:00 PM</b> — Demos & Judging</li>
+      <li><b>June 22, 4:00 PM</b> — Awards & Closing Ceremony</li>
+    </ul>
+  </div>
+
+  <div class="section" id="partners">
+    <h2>Our Partners</h2>
+    <div class="partners-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React">
+    
+    </div>
+    <ul class="partners-list">
+      <li>Microsoft</li>
+      <li>IBM</li>
+      <li>Google</li>
+      <li>OpenAI</li>
+      <li>TechNova</li>
+    </ul>
+  </div>
+
+ 
+  <div class="section" id="faq">
+    <h2>FAQ</h2>
     <div class="faq">
       <div class="faq-item">
-        <h4>❓ Who can participate?</h4>
-        <p>Anyone! Students, professionals, beginners, or experienced devs, all are welcome.</p>
+        <h4>Who can participate?</h4>
+        <p>Anyone 16+ with a passion for tech! Students and professionals welcome.</p>
       </div>
       <div class="faq-item">
-        <h4>💸 Is the event free?</h4>
-        <p>Absolutely! HackSphere 2025 is 100% free to join and participate.</p>
+        <h4>Is there a registration fee?</h4>
+        <p>Nope! HackSphere is 100% free for all accepted participants.</p>
       </div>
       <div class="faq-item">
-        <h4>🛠️ What do I need to prepare?</h4>
-        <p>A laptop, stable internet, and your creativity. We’ll take care of the rest!</p>
+        <h4>Do I need a team?</h4>
+        <p>No team? No problem! You can form teams at the event or join solo.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What should I bring?</h4>
+        <p>Your laptop, charger, and lots of energy! We’ll provide snacks, Wi-Fi, and fun.</p>
       </div>
     </div>
   </div>
 
-  <div class="footer">
-    © 2025 HackSphere. All rights reserved.
+
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" autocomplete="off">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required placeholder="Your Name" />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required placeholder="How can we help?"></textarea>
+
+      <button type="submit" onclick="event.preventDefault();alert('Thank you for your message!');">Send</button>
+    </form>
   </div>
 
+ 
+  <div class="footer">
+    &copy; 2025 HackSphere. All rights reserved.
+  </div>
+
+
+  <script>
+   
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
