@@ -6,6 +6,7 @@ const Footer: React.FC = () => {
         <section className='Footer'>
             <div className='FooterContent'>
                 <p>© 2025 HackSphere. All rights reserved.</p>
+                <p>X and Instagram : @HackSphere2025</p>
             </div>
         </section>
     );

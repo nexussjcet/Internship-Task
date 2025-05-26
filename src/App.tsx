@@ -8,10 +8,10 @@ import Footer from './components/Footer';
 
 
 function App() {
+      useEffect(() => {
+      document.title = 'HackSphere2025';
+    });
   return (
-    useEffect(() => {
-      document.title = 'HackSphere2025'; // ✅ This sets the tab title
-    }),
     <div className='App'>
       <Header/>
       <Hero/>
