@@ -1,0 +1,89 @@
+.About {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  overflow: visible;
+}
+
+.AboutContent {
+  width: 96%;
+  max-width: 96%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 5px solid #1e3a8a;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.AboutContent h1 {
+  margin: 0 0 1.5rem 0;
+  color: rgb(122, 158, 235);
+  font-size: 4rem;
+  position: relative;
+  font-weight: 700;
+}
+
+.AboutContent h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #60a5fa, #1e40af);
+}
+
+.AboutContent h2 {
+  margin: 1.5rem 0 0.5rem 0;
+  color: rgb(122, 158, 235);
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.AboutContent h3 {
+  margin: 1rem 0 1.5rem 0;
+  color: rgb(122, 158, 235);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.AboutContent h4 {
+  margin: 0.5rem 0;
+  color: rgb(122, 158, 235);
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.AboutContent p {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #1f3351;
+}
+
+.AboutContent a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.AboutContent a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
