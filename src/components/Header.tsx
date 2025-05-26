@@ -8,6 +8,7 @@ const Header: React.FC = () => {
             <nav className='links'>
                 <a href="#faq">FAQ</a>
                 <a href="#registerButton">Registration</a>
+                <a href="#Contacts">ContactUs</a>
             </nav>
         </header>
     );
