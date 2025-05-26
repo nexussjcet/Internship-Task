@@ -3,7 +3,7 @@ import './styles/FAQ.css';
 
 const FAQ: React.FC = () => {
     return (
-        <section className="FAQ">
+        <section className="FAQ" id="faq">
             <div className="FAQ-Content">
                 <h1>FAQ</h1>
 

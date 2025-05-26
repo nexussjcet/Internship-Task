@@ -13,7 +13,7 @@ const Hero: React.FC = () =>{
                     <p>June 20–22, 2025 – Online</p>
                 </div>
             </div>
-            <div className='registerButton'>
+            <div className='registerButton' id='registerButton'>
                 <button>Register Now</button>
             </div>
         </section>

@@ -3,7 +3,7 @@ import './styles/Contacts.css'
 
 const Contacts: React.FC = () =>{
     return(
-        <section className="Contacts">
+        <section className="Contacts" id="Contacts">
             <h1>
             ContactUS    
             </h1>
