@@ -1,0 +1,66 @@
+.Contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  border: 5px solid #1e3a8a;
+  border-radius: 15px;
+  margin: 2rem;
+}
+
+.Contacts h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: rgb(122, 158, 235);;
+}
+
+.mail-id, .phone-no {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 2.5px solid #1e3a8a;
+}
+
+.mail-id:hover, .phone-no:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mail-id p, .phone-no p {
+  margin: 0.5rem 0;
+  
+}
+
+.mail-id p:first-child, .phone-no p:first-child {
+  font-size: 1rem;
+  color: #666;
+}
+
+.mail-id p:last-child, .phone-no p:last-child {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .Contacts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .Contacts h1 {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .mail-id, .phone-no {
+    margin: 0 1rem;
+  }
+}

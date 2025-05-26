@@ -17,6 +17,7 @@ body {
 .banner {
   position: relative;
   width: 100%;
+  
 }
 
 .banner img {
@@ -79,9 +80,35 @@ body {
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: 5px solid #1e3a8a;
 }
 
 .registerButton button:hover {
   background-color: #1e40af;
   transform: none;
+}
+
+/* Mobile styles (default) */
+@media (max-width: 767px) {
+  .registerButton button {
+    transform: scale(0.9);
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .registerButton button {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .registerButton button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: #1e40af;
+  }
+  
+  .registerButton button:active {
+    transform: translateY(-5px);
+  }
 }
