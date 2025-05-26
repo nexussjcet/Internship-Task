@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/Internship-Task/',
   build: {
-    outDir: '../docs', 
+    outDir: 'docs', 
     emptyOutDir: true
   }
 })
