@@ -1,7 +1,5 @@
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [ main ]
+name: Deploy
+on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,8 +8,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: cd Abhishek_Krishna_A_M && npm install && npm run build
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs  # Looks for docs in root
+      - run: |
+          cd Abhishek_Krishna_A_M
+          npm install
+          npm run build
+      - name: Deploy to GH Pages
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          cd Abhishek_Krishna_A_M
+          git add docs
+          git commit -m "Deploy to GitHub Pages"
+          git push
