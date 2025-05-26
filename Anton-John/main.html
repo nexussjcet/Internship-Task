@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackSphere 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="images/x-icon" href="images/icon/tabico.png">
+</head>
+<body>
+    <div id="main-navbar">
+        <div class="nav-item" id="menu-button">MENU</div>
+    </div>
+
+    <div id="full-screen-menu">
+        <div class="menu-options-container">
+            <a href="#second-page" class="menu-option">ABOUT</a>
+            <a href="#third-page" class="menu-option">VISION</a>
+            <a href="#fourth-page" class="menu-option">FAQ</a>
+            <a href="#fifth-page" class="menu-option" id="contact-menu-option">CONTACT</a>
+        </div>
+    </div>
+
+    <div id="hero-content-area">
+        <h1 id="main-title">
+            <span class="word-top" id="hacksphere-title-link">HackSphere</span>
+            <span class="tagline">Code. Create. Conquer.</span>
+            <span class="word-bottom">2025</span>
+        </h1>
+        <h2 class="subtitle">SJCET PALAI | JULY 26TH - 27TH</h2>
+        <button class="cssbuttons-io-button register-button">
+            Register now
+            <div class="icon">
+                <svg
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                        fill="currentColor"
+                    ></path>
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <div id="glass-overlay"></div>
+    <div id="sphere">
+        <canvas id="globe"></canvas>
+    </div>
+    <div id="glass-hover-effect"></div>
+
+    <div id="scroll-container">
+        <div id="scroll-track"></div>
+
+        <div id="second-page" class="page">
+            <div class="page-content-wrapper"> <div class="image-container" id="second-page-image">
+                    <img src="images/SJCET.jpg" alt="Abstract Portrait"  onerror="this.onerror=null;this.src='https://placehold.co/600x338/cccccc/FFFFFF?text=Image+Not+Found';">
+                </div>
+                <div class="text-container" id="second-page-text">
+                    <h2>About HackSphere 2025</h2>
+                    <p>Since its inception in 2014, HackSphere has served as a crucible of innovation, consistently pushing the boundaries of technological possibility. Each year, we gather the brightest minds from across the globe, challenging them to transform audacious ideas into tangible prototypes within a demanding, high-energy environment. From the nascent stages of AI and the explosion of Web3 to the critical rise of sustainable tech, HackSphere has not only mirrored but often presaged the industry's most significant shifts. Our intense 48-hour sprints have launched countless impactful open-source projects and even fostered the genesis of successful startups, demonstrating the incredible power of focused collaboration and rapid development. HackSphere 2025 continues this legacy, promising another electrifying chapter in our journey of tech disruption.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="third-page" class="page">
+            <div class="page-content-wrapper"> <div class="text-container" id="third-page-text">
+                    <h2>Our Vision & Impact</h2>
+                    <p>What truly sets HackSphere apart isn't just the sheer volume of projects, but the audacious spirit that permeates every corner of the event. It's a dynamic space where unconventional solutions are celebrated, where interdisciplinary collaboration flourishes, and where the impossible often becomes just another problem waiting to be solved. For over a decade, HackSphere has done more than simply organize hackathons; we've shattered expectations, redefined what's achievable in a short timeframe, and cultivated a legacy of relentless innovation. Our community, fueled by curiosity and courage, continues to inspire and actively shape the future of technology, proving that with enough passion and ingenuity, anything is within reach.</p>
+                </div>
+                <div class="image-container" id="third-page-image">
+                    <img src="images/ai.png" alt="Hackathon Event Image" onerror="this.onerror=null;this.src='https://placehold.co/600x338/cccccc/FFFFFF?text=Image+Not+Found';">
+                </div>
+            </div>
+        </div>
+
+        <div id="fourth-page" class="page">
+            <div class="page-content-wrapper faq-content-wrapper">
+                <div class="faq-title-wrapper"> <h2>FAQ</h2>
+                </div>
+
+               <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">01</div>
+                        <div class="faq-question-text">Who can participate and what are the eligibility requirements?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Participation is open to individuals of all ages and backgrounds. While a passion for innovation and problem-solving is key, there are no strict age or student status requirements. We encourage a diverse range of participants, from seasoned developers to enthusiastic beginners.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">02</div>
+                        <div class="faq-question-text">Do I need a team, and if so, how big can it be?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can participate solo, but we highly recommend forming or joining a team to enhance your experience. Teams can consist of up to 4 members. We will host dedicated team-forming sessions at the beginning of the hackathon.</p>
+                </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">03</div>
+                        <div class="faq-question-text">Is prior coding experience necessary?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No prior coding experience is strictly required. While it helps, we encourage beginners to join. Many projects can incorporate design, business, or presentation skills, and mentors will be available to guide you through coding challenges.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">04</div>
+                        <div class="faq-question-text">What kind of projects are expected, and are there specific themes?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You are encouraged to build innovative software or hardware solutions that address the hackathon themes. Projects can range from web applications and mobile apps to IoT devices. Specific themes will be unveiled during the opening ceremony.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">05</div>
+                        <div class="faq-question-text">Will mentors and technical support be available?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! A dedicated team of experienced mentors, including industry professionals, will be available throughout the event to provide guidance. Our technical support team will also assist with any network or platform issues.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">06</div>
+                        <div class="faq-question-text">What resources and APIs will be provided?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We will provide access to various resources, including power outlets, Wi-Fi, and a selection of popular APIs and development tools. A complete list of available resources will be shared closer to the event date.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">07</div>
+                        <div class="faq-question-text">What is the schedule of events?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A detailed schedule including the opening ceremony, various workshops, judging sessions, and the closing awards ceremony will be published on our official website and shared via email a week before the hackathon.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">08</div>
+                        <div class="faq-question-text">Is there a code of conduct?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we uphold a strict code of conduct to ensure a safe, inclusive, and respectful environment for all participants, mentors, and organizers. The full code of conduct will be available on our website and reviewed during the opening ceremony.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">09</div>
+                        <div class="faq-question-text">Where is the hackathon located, and what are the venue's operating hours?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The hackathon will be held at the SJCET Auditorium(Einstein Hall), located at Choondacherry,Palai,Kottayam. The venue is open from 8:00 AM (25TH JUNE) to 6:00 PM (26TH JUNE), allowing for continuous hacking.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">10</div>
+                        <div class="faq-question-text">Will food, drinks, and resting areas be provided?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we will provide regular meals, snacks, and beverages to keep you energized. There will also be a designated sleeping area and quiet zones for participants who wish to rest at the venue.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">11</div>
+                        <div class="faq-question-text">What should I bring, and is parking available?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend bringing your laptop, chargers, any necessary peripherals, personal toiletries, comfortable clothing, and if staying overnight, a sleeping bag. Limited parking will be available at or near the venue, with specific instructions provided in your welcome email.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">12</div>
+                        <div class="faq-question-text">What are the prizes and prize categories?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The winning teams will receive exciting prizes, which include internship opportunity in Nexus and have acrash prize of $1,00,000. In addition to overall winners, we will have special categories like "Best Beginner Hack" and "Most Innovative Solution."</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">13</div>
+                        <div class="faq-question-text">How will projects be judged, and who are the judges?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Projects will be judged based on originality, technical complexity, completeness, potential impact, and presentation quality. Our judging panel comprises distinguished experts from the tech industry, academia, and startup ecosystem.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">14</div>
+                        <div class="faq-question-text">How do we submit projects, and what are the requirements?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Projects will be submitted through a designated online platform. Submissions typically require a link to your GitHub repository, a short demo video, and a brief project description. A final presentation to the judges will also be part of the evaluation process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question-header">
+                        <div class="faq-number">15</div>
+                        <div class="faq-question-text">When and where will the winners be announced, and do teams retain IP?</div>
+                        <div class="faq-arrow"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The winners will be announced during the closing ceremony, which will take place at Einstein Hall on 26th june at 5:00 PM. All participating teams retain full ownership of the intellectual property developed during the hackathon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fifth-page" class="page">
+           <div class="page-content-wrapper">
+               <div class="footer-details">
+                   <div class="footer-designed-by">
+                       Designed by Anton John
+                   </div>
+                   <div class="footer-social-links">
+                       <a href="https://www.linkedin.com/in/sjcetpalai/?originalSubdomain=in" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                       <a href="https://www.instagram.com/sjcetpalai/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                       <a href="https://www.facebook.com/sjcetpalai/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                   </div>
+               </div>
+               <div class="footer-section">
+                   <div class="footer-sjcet-text">
+                       SJCET
+                       <div class="copyright-text">© 2025 HackSphere. All rights reserved.</div>
+                   </div>
+               </div>
+           </div>
+        </div> <script rel="module" src="script.js"></script>
+</body>
+</html>
