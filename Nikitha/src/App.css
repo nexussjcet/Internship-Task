@@ -5,14 +5,14 @@
 }
 
 :root {
-  --primary-color: #6200ea;
-  --secondary-color: #03dac6;
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
   --background-color: #121212;
   --surface-color: #1e1e1e;
   --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-secondary: rgba(46, 8, 8, 0.7);
   --error-color: #cf6679;
-  --success-color: #03dac6;
+  --success-color: #149384;
   --radius: 8px;
 }
 
@@ -22,3 +22,19 @@
   background-color: var(--background-color);
   line-height: 1.6;
 }
+ body{
+  font-family: "Inter", "Roboto", sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+ }
+
+ body, .base{
+  font-weight: 400;
+ }
+
+ .button-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: var(--radius);
+ }

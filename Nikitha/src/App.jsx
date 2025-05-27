@@ -2,12 +2,14 @@ import { useState } from 'react'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
-import Tracks from './components/Tracks/Tracks'
+import Contactus from './components/Contactus/Contactus'
 import Schedule from './components/Schedule/Schedule'
-import Sponsors from './components/Sponsors/Sponsors'
+import Copyright from './components/Copyright/Copyright'
 import FAQ from './components/FAQ/FAQ'
 import Footer from './components/Footer/Footer'
 import './App.css'
+import './index.css';
+
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,11 +19,12 @@ function App() {
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero />
       <About />
-      <Tracks />
+      <Contactus />
       <Schedule />
-      <Sponsors />
       <FAQ />
-      <Footer />
+      <Footer>
+         <Copyright />
+      </Footer>
     </div>
   )
 }

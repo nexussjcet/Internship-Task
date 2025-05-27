@@ -1,0 +1,32 @@
+.contactus-container {
+  max-width: 2000px;
+  margin: 40px auto;
+  padding: 24px 16px;
+  background: #061119;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(12, 64, 115, 0.08);
+  text-align: center;
+}
+
+.contactus-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #02274d;
+  margin-bottom: 18px;
+}
+
+.contactus-info {
+  font-size: 1.1rem;
+  color: #221e1e;
+  margin-bottom: 12px;
+}
+
+.contactus-link {
+  color: #0e1317;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.contactus-link:hover {
+  color: #0d47a1;
+}

@@ -1,69 +1,38 @@
-.section {
-    padding: 5rem 10%;
+.schedules-container {
+  max-width: 1500px;
+  margin: 45px auto;
+  padding: 32px 16px;
+  background: #f4f6fa;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  text-align: center;
 }
 
-.sectionTitle {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-    color: var(--text-color);
+
+.schedules-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #dbdbdb;
+  margin-bottom: 18px;
 }
 
-.sectionTitle::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 4px;
-    background: var(--secondary-color);
-    border-radius: 2px;
+.schedules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: left;
+  max-width: 500px;
+
+  
 }
 
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.schedules-list li {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  color: #222;
 }
 
-.timelineItem {
-    background-color: var(--surface-color);
-    padding: 2rem;
-    border-radius: var(--radius);
-    position: relative;
-}
-
-.timelineItem h3 {
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.timelineItem ul {
-    list-style: none;
-}
-
-.timelineItem li {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: baseline;
-}
-
-.timelineItem li span {
-    font-weight: 600;
-    color: var(--primary-color);
-    min-width: 100px;
-    display: inline-block;
-}
-
-@media (max-width: 768px) {
-    .section {
-        padding: 4rem 5%;
-    }
-
-    .sectionTitle {
-        font-size: 2rem;
-    }
+.schedules-time {
+  font-weight: bold;
+  color: #1976d2;
 }

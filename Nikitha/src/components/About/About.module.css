@@ -1,90 +1,75 @@
-.section {
-    padding: 5rem 10%;
+.about-container {
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 32px 16px;
+  background: #37103f;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
 
-.sectionTitle {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-    color: var(--text-color);
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #161e7c;
 }
 
-.sectionTitle::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 4px;
-    background: var(--secondary-color);
-    border-radius: 2px;
+.about-text {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #ffffff;
 }
 
-.aboutContent {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
+.about-section {
+  background: #181a1b;
+  color: #fff;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 24px rgba(0,0,0,0.18);
 }
 
-.aboutText {
-    flex: 1;
-    min-width: 300px;
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
-.aboutText p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    color: var(--text-secondary);
+.about-section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
 }
 
-.stats {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    flex-wrap: wrap;
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.stat {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--surface-color);
-    border-radius: var(--radius);
-    min-width: 150px;
-    transition: transform 0.3s ease;
+.stat-card {
+  background: #232526;
+  border-radius: 10px;
+  padding: 1.2rem 2rem;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
 }
 
-.stat:hover {
-    transform: translateY(-10px);
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00eaff;
 }
 
-.stat h3 {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
-
-.stat p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-}
-
-@media (max-width: 768px) {
-
-    .aboutContent,
-    .stats {
-        flex-direction: column;
-    }
-
-    .section {
-        padding: 4rem 5%;
-    }
-
-    .sectionTitle {
-        font-size: 2rem;
-    }
+.stat-label {
+  font-size: 1rem;
+  color: #b0bec5;
+  margin-top: 0.5rem;
 }

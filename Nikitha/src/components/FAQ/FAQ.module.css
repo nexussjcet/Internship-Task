@@ -1,60 +1,60 @@
-.section {
-    padding: 5rem 10%;
+.faq-container {
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 32px 16px;
+  background: #1a1919;
 }
 
-.sectionTitle {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-    color: var(--text-color);
+.faq-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #1a237e;
+  letter-spacing: 0.5px;
+}
+.faq-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
 }
 
-.sectionTitle::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 4px;
-    background: var(--secondary-color);
-    border-radius: 2px;
+.faq-card {
+  background: linear-gradient(135deg, #290c3a 60%, #541644 100%);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(43, 39, 39, 0.13);
+  padding: 28px 24px;
+  text-align: left;
+  transition: transform 0.18s;
 }
 
-.faqGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.faq-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 32px rgba(255, 142, 142, 0.18);
+}
+.faq-item {
+  background: #cf8c8c;
+  border-radius: 10px;
+  padding: 22px 20px 8px rgba(68, 39, 39, 0.13);
+  text-align: left;
 }
 
-.faqItem {
-    background-color: var(--surface-color);
-    padding: 2rem;
-    border-radius: var(--radius);
-    transition: transform 0.3s ease;
+.faq-question {
+  font-size: 1.1rem;
+  color: #d8cbcb;
+  margin-bottom: 4px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-.faqItem:hover {
-    transform: translateY(-5px);
+.faq-answer {
+  font-size: 1rem;
+  color: #eee5e5;
+  line-height: 1.6;
 }
 
-.faqItem h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.faqItem p {
-    color: var(--text-secondary);
-}
-
-@media (max-width: 768px) {
-    .section {
-        padding: 4rem 5%;
-    }
-
-    .sectionTitle {
-        font-size: 2rem;
+@media (max-width: 800px) {
+    .faq-cards{
+        grid-template-columns: 1fr;
     }
 }
