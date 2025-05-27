@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0f1b;
+  color: #f5f5f5;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+canvas#dotsBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -2;
+  display: block;
+  pointer-events: none;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(13, 15, 27, 0.85);
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: #00ffae;
+  text-shadow: 0 0 10px #00ffae88;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin: 0.3rem 0;
+  color: #d0d0d0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #00ffae;
+  color: #0d0f1b;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 0 15px #00ffae66;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  background-color: #00d68f;
+  transform: scale(1.05);
+}
+
+section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about, .why, .articles, .team, .testimonials, .social {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: #00ffae;
+  text-shadow: 0 0 8px #00ffae55;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #1a1d2e;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 0 12px #00ffae33;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 20px #00ffae55;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #00ffae22;
+}
+
+.card h3 {
+  color: #00ffae;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #131623;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #00ffae22;
+  font-family: 'Share Tech Mono', monospace;
+}
+.faq-section {
+  padding: 60px 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-container {
+  margin-top: 30px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #00ffae40;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0ff;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 5px;
+}
+.agenda-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid #0ff;
+}
+
+.agenda-list li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 15px;
+  color: #eee;
+}
+
+.agenda-list li::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #0ff;
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 5px;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Adds spacing between links */
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
