@@ -1,0 +1,38 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+export default function HackSphereLanding() {
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-indigo-900 to-black text-white font-sans">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center py-24 px-4">
+        <h1 className="text-5xl font-bold mb-4">HackSphere 2025</h1>
+        <p className="text-2xl italic mb-2">“Code. Create. Conquer.”</p>
+        <p className="mb-6">June 20–22, 2025 – Online</p>
+        <Button className="text-lg px-6 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500">
+          Register Now
+        </Button>
+      </section>
+
+      
+      <section className="max-w-3xl mx-auto px-6 py-16 text-center">
+        <h2 className="text-3xl font-semibold mb-6">About HackSphere</h2>
+        <p className="mb-4">
+          HackSphere 2025 is a global 48-hour online hackathon where developers,
+          designers, and creators come together to build innovative solutions,
+          tackle real-world challenges, and connect with a global tech community.
+        </p>
+        <p>
+          Whether you’re a beginner or a seasoned hacker, HackSphere offers a platform
+          to learn, collaborate, and bring your boldest ideas to life. Let’s
+          innovate, inspire, and impact—together.
+        </p>
+      </section>
+
+     
+      <footer className="py-6 border-t border-gray-700 text-center text-sm text-gray-400">
+        © 2025 HackSphere. All rights reserved.
+      </footer>
+    </main>
+  );
+}
