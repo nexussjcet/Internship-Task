@@ -1,0 +1,85 @@
+.footer {
+    background-color: var(--surface-color);
+    padding: 4rem 10% 2rem;
+}
+
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: baseline;
+}
+
+.footerLogo h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.year {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.linkColumn h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.linkColumn ul {
+    list-style: none;
+}
+
+.linkColumn li {
+    margin-bottom: 0.8rem;
+}
+
+.linkColumn a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.linkColumn a:hover {
+    color: var(--primary-color);
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footerLinks {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,149 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+}
+
+.logo h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.year {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+}
+
+.navLinks li {
+    margin: 0 1.5rem;
+}
+
+.navLinks a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: var(--secondary-color);
+}
+
+.registerBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 2rem;
+}
+
+.registerBtn:hover {
+    background-color: #7c4dff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+
+.mobileMenu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    clip-path: circle(0% at top right);
+    transition: clip-path 0.5s ease-in-out;
+}
+
+.mobileMenu.open {
+    clip-path: circle(150% at top right);
+}
+
+.mobileMenu ul {
+    list-style: none;
+}
+
+.mobileMenu li {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mobileMenu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.mobileRegisterBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .navLinks {
+        display: none;
+    }
+
+    .registerBtn {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+}

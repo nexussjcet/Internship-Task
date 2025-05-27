@@ -1,0 +1,70 @@
+.section {
+    padding: 5rem 10%;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--text-color);
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.sponsorText {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.sponsorTiers {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.tier h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.sponsorLogos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.sponsorLogo {
+    background-color: var(--surface-color);
+    width: 200px;
+    height: 100px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 5%;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+}
