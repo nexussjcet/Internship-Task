@@ -1,55 +1,19 @@
-# 🚀 Internship Task – Landing Page Challenge
+# 🚀 HackSphere 2025 – Landing Page
 
-Design a beautiful, responsive landing page for our fictional global hackathon event using **any tech stack** of your choice. This is your chance to get creative while following a basic brief.
+![HackSphere Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2w2bW1vN2RkM3F4Z2R2M2VvZ3J3N2V1Y3V3eGZ4d2I3d2t3a3V3bCZ2ZyZ2d2R3Z3/giphy.gif)
 
----
+A futuristic, neon-themed React landing page for **HackSphere 2025** — featuring an animated starfield, glowing hero section, and a sleek, modern design for your hackathon or tech event.
 
-## 📝 Task Description
-
-Create a landing page for our fictional hackathon - **HackSphere 2025**, a global 48-hour hackathon bringing together developers, designers, and creators.
-
-### 🎯 Required Sections
-
-#### 1. 🔥 Hero Section
-- Event Name: `HackSphere 2025`(fictional)
-- Tagline: _“Code. Create. Conquer.”_
-- Event Date & Location: `June 20–22, 2025 – Online`
-- CTA Button: **Register Now**
-
-#### 2. ℹ️ About Section
-- Brief description of the event (1–2 short paragraphs)
-
-#### 3. 🔻 Footer
-- Centered text: `© 2025 HackSphere. All rights reserved.`
+> ✨ **Code. Create. Conquer.**
 
 ---
 
-## 💡 Guidelines
+## 🛠️ Getting Started
 
-- You can use **any tech stack** of your choice. (Using any framework gets more weightage, eg: React, Svelte, etc.)
-- Feel free to add **extra sections** like FAQs, Schedule, Partners, or Contact if you’d like.
-- No backend is required – keep it front-end only.
-- You **can use AI (e.g., ChatGPT)** or **Google** to help with ideas, design, or code.
-- Keep it **simple and clean**.
+### 🚩 Clone and Run Locally
 
----
-
-## 🔧 Submission Instructions
-
-1. **Fork** this repository.
-2. Build your project inside a folder with your name.
-3. Once you're done, **create a Pull Request**.
-4. Make sure your code is working, and your landing page opens correctly in the browser.
-
----
-
-## 🧑‍💻 Need Help?
-
-If you get stuck or have questions:
-- Use Google or AI tools like ChatGPT
-- Or feel free to **reach out to us** for support!
-
----
-
-## 🙌 Good Luck!
-
+```bash
+git clone https://github.com/yourusername/hacksphere-landing.git
+cd hacksphere-landing
+npm install
+npm start
