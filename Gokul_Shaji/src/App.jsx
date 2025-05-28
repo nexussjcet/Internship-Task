@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import background1 from './assets/background1.jpg'
+import Section  from './components/section.jsx'
+
 
 // import './App.css'
 function App() {
@@ -60,6 +62,36 @@ function App() {
           </div>
         </div>
       </div>
+      <div className='text-white '>
+      <div className=' text-3xl mt-10 ml-5 text-center'>
+        <h1>
+          How hacksphere 2025 will bring your</h1>
+        <h1>ideas to life</h1>
+      </div>
+      <div className='flex justify-center items-center mt-3 rounded-2xl' >
+    <div className='bg-black/70 shadow-[0_0_15px_3px_rgba(59,130,246,0.5)] max-w-2/3  m-4 md:text-center p-6 text-0.5xl rounded-2xl 
+    transition-transform duration-300 ease-in-out hover:scale-105 hover:z-10 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]; '>
+        <p>HackSphere 2025 is a global 48-hour online hackathon happening from June 22–24, 2025. It’s designed to unite developers, designers, innovators, and problem-solvers from around the world in a fast-paced, collaborative environment — all from the comfort of your own home.
+
+Over the course of two intense days, participants will tackle real-world challenges, build cutting-edge solutions, and compete for prizes and global recognition. Whether you're a seasoned coder or a first-time hacker, HackSphere is your opportunity to learn,</p>
+      </div>
+    </div>
+    <div className='flex flex-wrap justify-center '>
+      <Section h1="Join Us for an Exciting 48-Hour" 
+               h2="Coding Challenge"
+               description="HackoSphere is your chance to innovate,collaborate and showcase your skills"/>
+       
+       <Section h1="Registration is Easy and Quick-" 
+       h2="Get Started Today!"
+       description="Sign Up to Secure the Spot for your Team"
+       />
+        
+        <Section h1="Submit your Projects for a Chance"
+        h2="To Win Amazing Prices"
+        description="Showcase your Project by Submitting your Project before Deadline "
+        />
+    </div>
+  </div>
     </>
   )
 }
