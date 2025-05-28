@@ -1,0 +1,69 @@
+```jsx
+import React from "react";
+
+const App = () => {
+  return (
+    <div className="bg-gradient-to-br from-purple-900 to-blue-900 text-white min-h-screen">
+      {/* Hero Section */}
+      <section className="flex flex-col justify-center items-center text-center py-12">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4">HackSphere 2025</h1>
+        <p className="text-xl md:text-2xl italic mb-4">“Code. Create. Conquer.”</p>
+        <p className="text-lg mb-6">June 20–22, 2025 – Online</p>
+        <button className="bg-pink-600 hover:bg-pink-700 px-6 py-3 rounded-lg text-lg transition">
+          Register Now
+        </button>
+      </section>
+
+      {/* About Section */}
+      <section className="bg-white text-gray-800 py-16 px-6 text-center">
+        <h2 className="text-4xl font-semibold mb-6">About HackSphere</h2>
+        <p className="max-w-3xl mx-auto text-lg">
+          HackSphere 2025 is a global 48-hour hackathon connecting developers, designers, and
+          creators from across the world. Build something meaningful, solve real-world problems, and
+          collaborate in a virtual space.
+        </p>
+      </section>
+
+      {/* Schedule Section */}
+      <section className="py-16 px-6 text-center">
+        <h2 className="text-4xl font-semibold mb-6">Schedule</h2>
+        <ul className="max-w-3xl mx-auto text-lg">
+          <li>🗓️ June 20 - Opening Ceremony & Team Formation</li>
+          <li>🛠️ June 21 - Hacking & Workshops</li>
+          <li>🏆 June 22 - Final Submissions & Closing Ceremony</li>
+        </ul>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-white text-gray-800 py-16 px-6 text-center">
+        <h2 className="text-4xl font-semibold mb-6">FAQs</h2>
+        <div className="max-w-3xl mx-auto text-lg">
+          <p><strong>Who can participate?</strong> Anyone! Students, professionals, beginners.</p>
+          <p><strong>Is it free?</strong> Yes, completely free to join.</p>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-16 px-6 text-center">
+        <h2 className="text-4xl font-semibold mb-6">Partners</h2>
+        <p>💼 Supported by top tech companies and universities worldwide.</p>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-white text-gray-800 py-16 px-6 text-center">
+        <h2 className="text-4xl font-semibold mb-6">Contact Us</h2>
+        <p>Email us at: <a href="mailto:info@hacksphere.com">info@hacksphere.com</a></p>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-center py-6 text-sm">
+        © 2025 HackSphere. All rights reserved.
+      </footer>
+    </div>
+  );
+};
+
+export default App;
+```
+
+
