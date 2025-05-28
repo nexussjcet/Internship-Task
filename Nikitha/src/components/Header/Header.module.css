@@ -2,28 +2,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1a237e;
+  background: #100f11;
   color: #fff;
   padding: 18px 32px;
   border-radius: 0 0 18px 18px;
-  box-shadow: 0 2px 8px rgba(26,35,126,0.10);
+  box-shadow: 0 2px 8px rgba(55, 59, 104, 0.1);
 }
 
 .header-logo {
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #fff;
+  color: #ead5e7;
 }
 
 .header-nav {
   display: flex;
   gap: 32px;
-  margin-left: auto;
+  margin-left: auto; /* Push nav to the extreme right */
 }
 
 .header-link {
-  color: #fff;
+  color: #b1a2a2;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -33,5 +33,5 @@
 
 .header-link:hover,
 .header-link:focus {
-  color: #ffb300;
+  color: #877f6e;
 }

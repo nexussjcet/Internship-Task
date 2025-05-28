@@ -2,7 +2,7 @@
   max-width: 1500px;
   margin: 45px auto;
   padding: 32px 16px;
-  background: #f4f6fa;
+  background:#140b16;
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   text-align: center;
@@ -12,7 +12,7 @@
 .schedules-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #dbdbdb;
+  color: #9294aa;
   margin-bottom: 18px;
 }
 
@@ -29,10 +29,10 @@
 .schedules-list li {
   font-size: 1.05rem;
   margin-bottom: 12px;
-  color: #222;
+  color: #ffffff;
 }
 
 .schedules-time {
   font-weight: bold;
-  color: #1976d2;
+  color: #91d5b2;
 }
