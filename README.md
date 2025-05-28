@@ -9,7 +9,7 @@ A futuristic, neon-themed React landing page for HackSphere 2025 — featuring a
 ## 🛠️ How to Run
 
 ```bash
-git clone https://github.com/yourusername/hacksphere-landing.git
+git clone https://github.com/CatherineSusanR/hacksphere-landing.git
 cd hacksphere-landing
 npm install
 npm start
