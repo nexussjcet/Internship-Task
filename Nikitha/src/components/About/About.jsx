@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './About.module.css'; // Import the CSS file
+import styles from './About.module.css'; 
 
 function About() {
   return (
@@ -22,7 +22,7 @@ function About() {
           <div className={styles["stat-label"]}>Special awards</div>
         </div>
         <div className={styles["stat-card"]}>
-          <div className={styles["stat-value"]}>125K</div>
+          <div className={styles["stat-value"]}>10k</div>
           <div className={styles["stat-label"]}>in Prizes</div>
         </div>
       </div>

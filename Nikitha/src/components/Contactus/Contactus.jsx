@@ -8,7 +8,7 @@ function Contactus() {
       <p className={styles["contactus-info"]}>
         Do you have any questions or need support? Email us at
         <a href="mailto:hacksphere2025@example.com" className={styles["contactus-link"]}>
-          {" "}hacksphere2025@example.com
+          {" "}hacksphere2025@gmail.com
         </a>
       </p>
       <p className={styles["contactus-info"]}>

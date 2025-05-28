@@ -29,7 +29,7 @@ function Footer() {
         <div>
           <div className={styles.footerSectionTitle}>Contact</div>
           <ul className={styles.footerSectionList}>
-            <li><a href="mailto:info@hacksphere.tech">info@hacksphere.tech</a></li>
+            <li><a href="mailto:info@hacksphere.tech">hacksphere2025@gmail.com</a></li>
             <li>
               <a href="#">Twitter</a>{" "}
               <a href="#">Instagram</a>{" "}

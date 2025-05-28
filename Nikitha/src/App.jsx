@@ -10,7 +10,6 @@ import Footer from './components/Footer/Footer'
 import './App.css'
 import './index.css';
 
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -19,11 +18,11 @@ function App() {
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero />
       <About />
-      <Contactus />
       <Schedule />
       <FAQ />
+      <Contactus />   
       <Footer>
-         <Copyright />
+        <Copyright />
       </Footer>
     </div>
   )

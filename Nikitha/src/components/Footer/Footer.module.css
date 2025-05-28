@@ -3,13 +3,14 @@
   color: #fff;
   padding: 40px 0 20px 0;
   width: 100%;
+  margin: 20px auto;
   font-family: inherit;
 }
 
 .footerContent {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* Center columns horizontally */
+  justify-content: center; 
   gap: 48px;
   max-width: 1200px;
   margin: 0 auto;

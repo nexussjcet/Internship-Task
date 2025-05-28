@@ -1,8 +1,8 @@
 .about-container {
   max-width: 1500px;
-  margin: 40px auto;
+  margin: 30px auto;
   padding: 32px 16px;
-  background: #140b16;
+  background: linear-gradient(135deg, #161219 60%, #390f2f 100%);
   border-radius: 14px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }

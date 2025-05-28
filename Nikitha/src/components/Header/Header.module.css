@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #100f11;
+    background: linear-gradient(135deg, #110f13 60%, #200a1b 100%);
   color: #fff;
   padding: 18px 32px;
   border-radius: 0 0 18px 18px;
@@ -13,17 +13,17 @@
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #ead5e7;
+  color: #ffffff;
 }
 
 .header-nav {
   display: flex;
   gap: 32px;
-  margin-left: auto; /* Push nav to the extreme right */
+  margin-left: auto; 
 }
 
 .header-link {
-  color: #b1a2a2;
+  color: #ebebeb;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
