@@ -11,7 +11,7 @@ const Section=({h1,h2,description})=>{
            <h1 className="mt-8">{h1} </h1> 
            <h1>{h2}</h1>
          </div>
-           <p className="text=0.5xl mt-12 ">{description} </p>
+           <p className="text-sm mt-12 ">{description} </p>
         </div>
     
        </>

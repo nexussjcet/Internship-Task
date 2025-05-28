@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import background1 from './assets/background1.jpg'
 import Section  from './components/section.jsx'
+import ImageSlider from './components/slider.jsx'
+import Faqs from './components/Faqs.jsx'
 
 
-// import './App.css'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <> 
-      <div className='text-white font-medium'>
+      <div className='text-white font-medium flex flex-col items-center justify-center w-full'>
         <div className="relative w-full h-screen min-h-[100vh] m-0" >
           <div className="absolute inset-0 bg-black opacity-50 -z-10"></div>
           <img
@@ -37,15 +39,15 @@ function App() {
                 </svg>
               </button>
             </div>
-            <ul className={`${count ? 'flex bg-black/70' : 'hidden'} sm:flex flex-col sm:flex-row justify-start items-center gap-4 sm:gap-6 text-base sm:text-lg `}>
+            <ul className={`${count ? 'flex bg-black/70' : 'hidden'} sm:flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-base sm:text-lg `}>
               <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>Home</li>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>Schedule</li>
               <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>About us</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>Events</li>
               <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>Contact</li>
             </ul>
           </nav>
-          <div>
-            <div className='text-center mt-16 md:mt-25 px-4'>
+          <div className='container mx-auto px-4'>
+            <div className='text-center mt-16 md:mt-25'>
               <h1 className='text-3xl sm:text-4xl md:text-6xl mb-2'>Join the Ultimate Coding</h1>
               <h1 className='text-3xl sm:text-4xl md:text-6xl mb-2'>Challenge at Hackosphere</h1>
               <h1 className='text-3xl sm:text-4xl md:text-6xl mb-4'>2025</h1>
@@ -90,8 +92,34 @@ Over the course of two intense days, participants will tackle real-world challen
         h2="To Win Amazing Prices"
         description="Showcase your Project by Submitting your Project before Deadline "
         />
-    </div>
+     </div>
+   </div>
+
+   <div>
+    <div className='text-center  text-white mt-6'>
+      <h1 className='text-4xl'>Event Highlights</h1>
+      <h5 className='text-0.5xl md:mt-6'>Explore inspiring moments from our past hackathons</h5>
+      </div>
+    <ImageSlider />
+    
   </div>
+
+<div >
+  <div className='text-center text-white mt-4'>
+      <h1 className='text-4xl'>FAQs</h1>
+      <h3 className='text-0.5xl mt-4'>Find answers to common questions about participating in HackoSphere 2025 </h3>
+  </div>
+</div>
+<div className='flex justify-center items-center mt-4 '>
+    <div className='flex flex-col items-center w-full'>
+      <Faqs question="How do I register?"
+      reply="Registration for HackSphere 2025 is simple! Visit our registration page, fill out the required details, and submit your application. Make sure to register before the deadline to secure your spot!"/>
+      <Faqs question="Who can participate?" reply="HackSphere 2025 welcomes developers, designers, and creators of all skill levels. Whether you're a seasoned pro or a newcomer, we encourage everyone to Join. Collaboration and creativity are at the heart of this event!" />
+      <Faqs question="What are the prizes?" reply="Participants will compete for exciting prizes, Including cash rewards, tech gadgets, and exclusive mentorship opportunities. The top teams will be recognized for their Innovative solutions. Stay tuned for more detalls on the prize" />
+      <Faqs question="When is the event?" reply="HackSphere 2025 will take place from June 20 to June 22, 2025. This global hackathon will be conducted entirely online. Mark your calendars and get ready to innovate!" />
+      <Faqs question="Can I join a team?" reply="Absolutely! Participants are encouraged to form teams or join existing ones. You can connect with others through our community platform before the event starts. Collaboration is key to success!" />
+    </div>
+ </div>
     </>
   )
 }
