@@ -26,7 +26,7 @@ Create a landing page for our fictional hackathon - **HackSphere 2025**, a globa
 
 ## 💡 Guidelines
 
-- You can use **any tech stack** of your choice.
+- You can use **any tech stack** of your choice. (Using any framework gets more weightage, eg: React, Svelte, etc.)
 - Feel free to add **extra sections** like FAQs, Schedule, Partners, or Contact if you’d like.
 - No backend is required – keep it front-end only.
 - You **can use AI (e.g., ChatGPT)** or **Google** to help with ideas, design, or code.
