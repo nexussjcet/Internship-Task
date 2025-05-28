@@ -38,6 +38,8 @@ const HackSphere = () => {
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      ctx.fillStyle = 'black';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
     };
 
     window.addEventListener('resize', handleResize);
@@ -78,6 +80,22 @@ const HackSphere = () => {
 
   return (
     <div>
+    <nav className="navbar" data-aos="fade-down">
+  <div className="logo">HackSphere</div>
+
+  <input type="checkbox" id="menu-toggle" className="menu-toggle" />
+  <label htmlFor="menu-toggle" className="hamburger">&#9776;</label>
+
+  <ul className="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+</nav>
+
+
       <header className="hero">
         <canvas ref={canvasRef} id="dotsBackground"></canvas>
         <div className="overlay"></div>
@@ -189,6 +207,39 @@ const HackSphere = () => {
     }
   ]}
 />
+<CardsSection
+  id="partners"
+  title="Our Partners"
+  dataAos="fade-up"
+  cards={[
+    {
+      img: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
+      title: 'Partner One',
+      text: 'TechCorp supports innovation through open collaboration.'
+    },
+    {
+      img: 'https://cdn-icons-png.flaticon.com/512/732/732228.png',
+      title: 'Partner Two',
+      text: 'GlobalNet fosters developer communities worldwide.'
+    },
+    {
+      img: 'https://cdn-icons-png.flaticon.com/512/888/888879.png',
+      title: 'Partner Three',
+      text: 'CloudBoost accelerates cloud-native project development.'
+    }
+  ]}
+/>
+
+<section id="contact" data-aos="fade-up">
+  <h2>Contact Us</h2>
+  <p>If you have questions or need help, reach out to us:</p>
+  <ul>
+    <li>Email: <a href="mailto:hacksphere@event.org">hacksphere@event.org</a></li>
+    <li>Discord: <a href="https://discord.gg/your-link">Join Our Server</a></li>
+    <li>Twitter: <a href="https://twitter.com/yourhandle">@HackSphere</a></li>
+  </ul>
+</section>
+
 <FaqSection
   faqs={[
     {
@@ -214,7 +265,7 @@ const HackSphere = () => {
 
       {/* Additional sections for Articles, Team, Testimonials, and FAQ go here using similar structure */}
 
-      <footer>
+<footer>
   <p>© 2025 HackSphere. All rights reserved.</p>
   <div className="social-links">
     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
@@ -234,8 +285,8 @@ const Section = ({ id, title, dataAos, children }) => (
   </section>
 );
 
-const CardsSection = ({ title, cards, dataAos }) => (
-  <section data-aos={dataAos}>
+const CardsSection = ({ id,title, cards, dataAos }) => (
+  <section id ={id} data-aos={dataAos}>
     <h2>{title}</h2>
     <div className="cards">
       {cards.map((card, index) => (
@@ -256,7 +307,7 @@ const FaqSection = ({ faqs }) => {
   };
 
   return (
-    <section className="faq-section" data-aos="fade-up">
+    <section id ="faq"className="faq-section" data-aos="fade-up">
       <h2>Frequently Asked Questions</h2>
       <div className="faq-container">
         {faqs.map((faq, index) => (
