@@ -2,31 +2,15 @@
 
 > “Code. Create. Conquer.”
 
-![HackSphere Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2w2bW1vN2RkM3F4Z2R2M2VvZ3J3N2V1Y3V3eGZ4d2I3d2t3a3V3bCZ2ZyZ2d2R3Z3/giphy.gif)
+![Tech Cat](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGZibG82bnAxY2lrc2tzY2l1NmJzZGw5NGc2aHZpdTNjc3ppcTNwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dWesBcTLavkZuG35MI/giphy.gif)
 
-A neon-themed React landing page for HackSphere 2025 — a futuristic, online hackathon with animations, starfield effects, and smooth scroll reveals.
-
----
-
-## ✨ Features
-
-- 🚀 Glowing Hero Section
-- 📅 3-Day Schedule Timeline
-- 🧠 About the Event
-- 🤝 Partners with Logos
-- ❓ FAQs
-- 📬 Contact Form with Message Area
-- 🌌 Animated Background (Particles.js)
-- 📱 Fully Responsive
+A vibrant, animated React landing page for HackSphere 2025 — a futuristic online hackathon experience.
 
 ---
 
-## ⚙️ Tech Stack
+## 🛠️ Tech Stack
 
-- React.js
-- CSS3
-- Particles.js
-- Animate on Scroll (AOS)
+React · CSS3 · JavaScript · HTML5
 
 ---
 
