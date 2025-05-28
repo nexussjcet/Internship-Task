@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.hero {
+  position: relative;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.oval-shape {
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: -50px;
+  left: -150px;
+  transform: rotate(-20deg);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.tagline, .date {
+  font-size: 1.2em;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: white;
+  color: #4a00e0;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.schedule-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.schedule-items div {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1 1 200px;
+}
+
+.faqs .faq-item {
+  margin-bottom: 20px;
+}
+
+.partners .partner-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.contact button {
+  padding: 10px;
+  background: #4a00e0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
