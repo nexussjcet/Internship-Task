@@ -52,10 +52,10 @@ function App() {
               </button>
             </div>
             <ul className={`${count ? 'flex bg-black/70' : 'hidden'} sm:flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-base sm:text-lg `}>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => scrollToSection(homeRef)}>Home</li>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => scrollToSection(aboutRef)}>About us</li>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => scrollToSection(eventRef)}>Events</li>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => scrollToSection(contactRef)}>Contact</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => {scrollToSection(homeRef);setCount(false)}}>Home</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => {scrollToSection(aboutRef);setCount(false)}}>About us</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => {scrollToSection(eventRef);setCount(false)}}>Events</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => {scrollToSection(contactRef);setCount(false)}}>Contact</li>
             </ul>
           </nav>
           <div className='container mx-auto px-4'>
