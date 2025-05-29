@@ -1,0 +1,87 @@
+/* App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0b0c10;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1f2833, #0b0c10);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #66fcf1;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #c5c6c7;
+}
+
+.date-location {
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #a3a3a3;
+}
+
+.btn-register {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #66fcf1;
+  color: #0b0c10;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-register:hover {
+  background-color: #45a29e;
+}
+
+.about {
+  background-color: #1f2833;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #66fcf1;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 10px auto;
+  font-size: 1.05rem;
+  color: #dddddd;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0b0c10;
+  font-size: 0.9rem;
+  color: #c5c6c7;
+}
+
