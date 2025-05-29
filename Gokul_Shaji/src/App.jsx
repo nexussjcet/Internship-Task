@@ -3,7 +3,10 @@ import background1 from './assets/background1.jpg'
 import Section  from './components/section.jsx'
 import ImageSlider from './components/slider.jsx'
 import Faqs from './components/Faqs.jsx'
-
+import Contact from './components/contact.jsx'
+import { MdOutlineEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 
 function App() {
@@ -105,7 +108,7 @@ Over the course of two intense days, participants will tackle real-world challen
   </div>
 
 <div >
-  <div className='text-center text-white mt-4'>
+  <div className='text-center text-white mt-4 '>
       <h1 className='text-4xl'>FAQs</h1>
       <h3 className='text-0.5xl mt-4'>Find answers to common questions about participating in HackoSphere 2025 </h3>
   </div>
@@ -120,6 +123,46 @@ Over the course of two intense days, participants will tackle real-world challen
       <Faqs question="Can I join a team?" reply="Absolutely! Participants are encouraged to form teams or join existing ones. You can connect with others through our community platform before the event starts. Collaboration is key to success!" />
     </div>
  </div>
+
+ <div className='text-white m-8 mt-12'>
+  <h1 className='text-4xl'>
+    Get in Touch
+  </h1>
+  <h6 className='text-sm mt-4'> For Enquiries about HackoSphere 2025,reach out</h6>
+ </div>
+
+ <div className='mt-2 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4  '>
+  <Contact logo={MdOutlineEmail}
+           h1="Email"
+           p1="Contact us via email for any questions"
+           type="email"
+           value="info@hackosphere.com"/>
+  <Contact logo={FaPhoneAlt }
+           h1="Phone"
+           p1="Call us for immediate assistance"
+           type="phone"
+           value="+12345-42293"/>
+    <Contact logo={ FaLocationDot }
+           h1="Office"
+           p1="Visit us for more information"
+           type="location"
+           value="San Francisco, CA"/>
+  
+ </div>
+ <div className='text-white text-sm text-center '>
+  <nav >
+    <ul className='flex justify-center gap-6 mt-8 p-10'>
+      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer'>Home</li>
+      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer'>About Us</li>
+      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer'>Events</li>
+      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer'>Contacts</li>
+    </ul>
+  </nav>
+ </div>
+ <hr className='text-white'/>
+ <footer className='text-white text-sm text-center pb-4'>
+  © 2025 HackSphere. All rights reserved.
+ </footer>
     </>
   )
 }
