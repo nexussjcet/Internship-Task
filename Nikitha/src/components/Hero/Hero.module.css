@@ -8,7 +8,6 @@
   position: relative;
   text-align: center;
   background: url('/download.gif') center center/cover no-repeat;
-  /* Optional: Add a dark overlay for better text contrast */
 }
 
 .hero::before {

@@ -30,7 +30,6 @@ function FAQ() {
             No, HackSphere 2025 is completely free for all participants.
           </div>
         </div>
-        {/* Add more FAQ cards as needed */}
       </div>
     </div>
   );
