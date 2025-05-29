@@ -1,4 +1,4 @@
-import styles from './hero.module.css';
+import styles from './Hero.module.css';
 import React from 'react';
 
 export default function Hero() {
