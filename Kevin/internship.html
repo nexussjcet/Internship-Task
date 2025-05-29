@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HackSphere 2025</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #9333ea);
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .date-location {
+      font-family: monospace;
+      background-color: #1e293b;
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #10b981;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #059669;
+    }
+
+    section.about, section.register {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section.about h2, section.register h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section.about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    section.register input, section.register button {
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      max-width: 400px;
+      font-size: 1rem;
+    }
+
+    section.register input {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    section.register button {
+      background-color: #3b82f6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #1e293b;
+      text-align: center;
+      padding: 20px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>HackSphere 2025</h1>
+    <p><em>“Code. Create. Conquer.”</em></p>
+    <div class="date-location">June 20–22, 2025 – Online</div><br/>
+    <button class="cta-button" onclick="scrollToRegister()">Register Now</button>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About HackSphere</h2>
+    <p>HackSphere 2025 is a global 48-hour virtual hackathon bringing together developers, designers, and innovators from around the world. Whether you're a seasoned coder or a beginner, there's something here for everyone.</p>
+    <p>Join us online for a weekend of creativity, collaboration, and coding challenges that push boundaries and ignite new ideas.</p>
+  </section>
+
+  <!-- Registration Section -->
+  <section class="register" id="register">
+    <h2>Register for HackSphere</h2>
+    <p>Fill out your email to receive event updates and a registration link:</p>
+    <input type="email" id="email" placeholder="Enter your email" />
+    <button onclick="submitEmail()">Submit</button>
+    <p id="message" style="color: #22c55e; margin-top: 10px;"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 HackSphere. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function scrollToRegister() {
+      document.getElementById("register").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function submitEmail() {
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message");
+
+      if (email && email.includes('@')) {
+        message.textContent = "Thank you for registering! Check your inbox soon.";
+      } else {
+        message.style.color = "#f87171";
+        message.textContent = "Please enter a valid email address.";
+      }
+    }
+  </script>
+
+</body>
+</html>
