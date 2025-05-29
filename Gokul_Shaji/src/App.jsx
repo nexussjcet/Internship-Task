@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState ,useRef} from 'react'
 import background1 from './assets/background1.jpg'
 import Section  from './components/section.jsx'
 import ImageSlider from './components/slider.jsx'
@@ -11,9 +11,18 @@ import { FaLocationDot } from "react-icons/fa6";
 
 function App() {
   const [count, setCount] = useState(0)
+  const homeRef=useRef()
+  const aboutRef=useRef()
+  const eventRef=useRef()
+  const contactRef=useRef()
+  const scrollToSection=(ref)=>{
+    ref.current?.scrollIntoView({behaviour: 'smooth'})
+  }
+  
 
   return (
     <> 
+    <section ref={homeRef}>
       <div className='text-white font-medium flex flex-col items-center justify-center w-full'>
         <div className="relative w-full h-screen min-h-[100vh] m-0" >
           <div className="absolute inset-0 bg-black opacity-50 -z-10"></div>
@@ -43,10 +52,10 @@ function App() {
               </button>
             </div>
             <ul className={`${count ? 'flex bg-black/70' : 'hidden'} sm:flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-base sm:text-lg `}>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>Home</li>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>About us</li>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>Events</li>
-              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center'>Contact</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => scrollToSection(homeRef)}>Home</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => scrollToSection(aboutRef)}>About us</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => scrollToSection(eventRef)}>Events</li>
+              <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer w-full sm:w-auto text-center' onClick={() => scrollToSection(contactRef)}>Contact</li>
             </ul>
           </nav>
           <div className='container mx-auto px-4'>
@@ -67,6 +76,9 @@ function App() {
           </div>
         </div>
       </div>
+    </section>
+
+    <section ref={aboutRef}>
       <div className='text-white '>
       <div className=' text-3xl mt-10 ml-5 text-center'>
         <h1>
@@ -81,6 +93,7 @@ function App() {
 Over the course of two intense days, participants will tackle real-world challenges, build cutting-edge solutions, and compete for prizes and global recognition. Whether you're a seasoned coder or a first-time hacker, HackSphere is your opportunity to learn,</p>
       </div>
     </div>
+    
     <div className='flex flex-wrap justify-center '>
       <Section h1="Join Us for an Exciting 48-Hour" 
                h2="Coding Challenge"
@@ -97,7 +110,8 @@ Over the course of two intense days, participants will tackle real-world challen
         />
      </div>
    </div>
-
+</section>
+<section ref={eventRef}>
    <div>
     <div className='text-center  text-white mt-6'>
       <h1 className='text-4xl'>Event Highlights</h1>
@@ -106,7 +120,9 @@ Over the course of two intense days, participants will tackle real-world challen
     <ImageSlider />
     
   </div>
+</section>
 
+<section>
 <div >
   <div className='text-center text-white mt-4 '>
       <h1 className='text-4xl'>FAQs</h1>
@@ -123,12 +139,14 @@ Over the course of two intense days, participants will tackle real-world challen
       <Faqs question="Can I join a team?" reply="Absolutely! Participants are encouraged to form teams or join existing ones. You can connect with others through our community platform before the event starts. Collaboration is key to success!" />
     </div>
  </div>
+</section>
 
+<section ref={contactRef}>
  <div className='text-white m-8 mt-12'>
   <h1 className='text-4xl'>
     Get in Touch
   </h1>
-  <h6 className='text-sm mt-4'> For Enquiries about HackoSphere 2025,reach out</h6>
+  <h6 className='text-sm mt-4'> For Enquiries about HackoSphere 2025,Reach out</h6>
  </div>
 
  <div className='mt-2 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4  '>
@@ -152,10 +170,10 @@ Over the course of two intense days, participants will tackle real-world challen
  <div className='text-white text-sm text-center '>
   <nav >
     <ul className='flex justify-center gap-6 mt-8 p-10'>
-      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer'>Home</li>
-      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer'>About Us</li>
-      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer'>Events</li>
-      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer'>Contacts</li>
+      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer' onClick={() => scrollToSection(homeRef)}>Home</li>
+      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer' onClick={() => scrollToSection(aboutRef)}>About Us</li>
+      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer' onClick={() => scrollToSection(eventRef)}>Events</li>
+      <li className='p-2 rounded-2xl hover:bg-white/20 transition-colors cursor-pointer' onClick={() => scrollToSection(contactRef)}>Contacts</li>
     </ul>
   </nav>
  </div>
@@ -163,6 +181,7 @@ Over the course of two intense days, participants will tackle real-world challen
  <footer className='text-white text-sm text-center pb-4'>
   © 2025 HackSphere. All rights reserved.
  </footer>
+</section>
     </>
   )
 }
