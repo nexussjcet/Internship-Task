@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackSphere 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <div class="overlay">
+      <h1>HackSphere 2025</h1>
+      <p class="tagline">“Code. Create. Conquer.”</p>
+      <p class="date">June 20–22, 2025 – Online</p>
+      <button class="cta-button" onclick="openModal()">Register Now</button>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About HackSphere</h2>
+    <p>
+      Step into a world where creativity fuels code and boundaries are rewritten in real time. HackSphere 2025 is more
+      than just a hackathon—it's a 48-hour global experience that unites brilliant minds across continents.
+    </p>
+    <p>
+      Dive into the future with fellow developers, visionary designers, and daring creators. Whether you're a seasoned pro
+      or just beginning your coding journey, HackSphere is your gateway to innovate, collaborate, and ignite
+      something extraordinary—all from the comfort of your screen.
+    </p>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Who can participate?</h3>
+      <p>Anyone with a passion for coding and creativity! Students, professionals, and hobbyists all welcome.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is there a participation fee?</h3>
+      <p>Nope! HackSphere 2025 is completely free.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What are the prizes?</h3>
+      <p>Exciting tech gadgets, mentorship oppertunities and amazing internships are awaiting you.</p>
+    </div>
+  </section>
+
+  <section class="contact-me">
+    <h2>Contact Me</h2>
+    <p>If you have questions, ideas, or just want to say hi, reach out!</p>
+    <form id="contactForm" onsubmit="event.preventDefault(); submitContactForm();">
+      <input type="text" id="contactName" placeholder="Your Name" required />
+      <input type="email" id="contactEmail" placeholder="Your Email" required />
+      <textarea id="contactMessage" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <span class="close" role="button" tabindex="0" aria-label="Close modal" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle">Register for HackSphere 2025</h3>
+      <form id="registerForm" onsubmit="event.preventDefault(); submitForm();">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        
+      <label for="course">Course:</label>
+        <select id="course" required>
+          <option value="" disabled selected>Select your course</option>
+         
+          <option value="btech">B.Tech</option>
+          <option value="bsc">B.Sc</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" placeholder="Your Branch (e.g. CSE, ECE)" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Your Age" min="10" max="100" required />
+
+        <button class="submit-btn" type="submit">Submit</button>
+      
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 HackSphere. All rights reserved.
+  </footer>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
