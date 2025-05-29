@@ -6,7 +6,7 @@ body {
   color: #eaeaea;
   letter-spacing: 0.5px;
 }
-
+/* Header */
 header {
   padding: 40px 20px;
 }
@@ -37,10 +37,10 @@ header h1 {
 .tagline,
 header p {
   font-size: 1.8rem;
-  color: #7ee8fa; /* soft cyan that pairs well with header gradient */
-  text-shadow: 0 0 3px rgba(126, 232, 250, 0.5); /* very subtle glow */
+  color: #7ee8fa; 
+  text-shadow: 0 0 3px rgba(126, 232, 250, 0.5); 
   font-style: italic;
-  font-weight: 500; /* medium weight for clarity */
+  font-weight: 500; 
   max-width: 600px;
   margin: 0 auto;
   padding-top: 5px ;
@@ -55,7 +55,7 @@ header p {
   color: #d1d1d1;
   font-weight: 300;
 }
-
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.9em;
