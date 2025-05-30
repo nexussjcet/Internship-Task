@@ -2,6 +2,11 @@
 
 This project implements the HackSphere landing page as part of the internship task. It's built with **React** and styled using **Tailwind CSS**.
 
+## Live Demo
+
+You can view the live deployment of this project here:
+[**HackSphere Landing Page Live**](https://hacksphere-landing-page.vercel.app/)
+
 ## Features
 
 * Responsive design.
