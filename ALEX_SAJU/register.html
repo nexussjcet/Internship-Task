@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+        
+            background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="40" height="40" fill="none"/><rect x="0" y="0" width="40" height="2" fill="%23334155"/><rect x="0" y="0" width="2" height="40" fill="%23334155"/></svg>');
+            background-size: 40px 40px;
+            animation: gridMove 6s linear infinite;
+            background-color: #0f172a;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center; 
+            height: 100vh; 
+        }
+        @keyframes gridMove {
+            0% {
+                background-position: 0 40px;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+        .register-container {
+            background: #1e293b; 
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 350px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #38bdf8; 
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #f1f5f9; 
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            font-size: 15px;
+            background: #0f172a; 
+            color: #f1f5f9; 
+        }
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder {
+            color: #94a3b8; 
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #fbbf24;
+            color: #1e293b;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        button:hover {
+            background: #fff;
+            color: #7c3aed;
+        }
+        footer {
+            background: #1e293b;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form>
+            <div class="form-group">
+                <label for="fullname">Full Name (Team Leader)</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address (Team Leader)</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name</label>
+                <input type="text" id="college" name="college" required>
+            </div>
+            <div class="form-group">
+                <label for="teamSize">Number of Students in Team</label>
+                <select id="teamSize" name="teamSize" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div id="participants"></div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <footer>
+        © 2025 HackSphere. All rights reserved.
+    </footer>
+    <script>
+        const teamSize = document.getElementById('teamSize');
+        const participantsDiv = document.getElementById('participants');
+
+        function updateParticipants() {
+            const count = parseInt(teamSize.value, 10);
+            let html = '';
+            for (let i = 1; i <= count; i++) {
+                html += `
+                <div class="form-group">
+                    <label for="participant${i}">Participant ${i} Name</label>
+                    <input type="text" id="participant${i}" name="participant${i}" required>
+                </div>`;
+            }
+            participantsDiv.innerHTML = html;
+        }
+
+        teamSize.addEventListener('change', updateParticipants);
+        updateParticipants();
+    </script>
+</body>
+</html>
