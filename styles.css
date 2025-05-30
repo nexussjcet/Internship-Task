@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+  text-align: center;
+}
+
+.hero {
+  background:linear-gradient(135deg,#3a0ca3, #7209b7);
+  color: rgb(249, 192, 227);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  background: #ffbe0b;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.cta-button:hover{
+    background-color: #faa307;
+}
+
+.about {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  color: rgb(208, 201, 237);
+}
+
+.about h2{
+    text-align: center;
+    color: #8d70d2;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
