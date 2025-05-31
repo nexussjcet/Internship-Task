@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HackSphere 2025</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Core layout styles inside HTML */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #4b0082;
+      padding: 15px 30px;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 10%;
+      background-color: #e6e6fa;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      color: #4b0082;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4b0082;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .hero img {
+      max-width: 400px;
+      height: auto;
+    }
+
+    .countdown-section {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f0f0ff;
+    }
+
+    .countdown-section h2 {
+      color: #4b0082;
+    }
+
+    #countdown span {
+      font-weight: bold;
+      font-size: 24px;
+      margin: 0 5px;
+    }
+
+    section {
+      padding: 40px 10%;
+    }
+
+    .about, .schedule {
+      background-color: #ffffff;
+    }
+
+    .about h2, .schedule h2 {
+      color: #4b0082;
+    }
+
+    .footer {
+      background-color: #4b0082;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">HackSphere</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>HackSphere 2025</h1>
+      <p><em>Code. Create. Conquer.</em></p>
+      <p>June 20–22, 2025 – Online</p>
+      <a href="#" class="btn">Register Now</a>
+    </div>
+    <img src="images/hack-image.png" alt="Hackathon Image" />
+  </section>
+
+  <!-- Countdown Timer -->
+  <section class="countdown-section">
+    <h2>Countdown to HackSphere 2025</h2>
+    <div id="countdown">
+      <span id="days">00</span> Days 
+      <span id="hours">00</span> Hours 
+      <span id="minutes">00</span> Minutes 
+      <span id="seconds">00</span> Seconds
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About the Event</h2>
+    <p>HackSphere 2025 is a global 48-hour hackathon that brings together developers, designers, and creators from around the world to innovate and build amazing solutions.</p>
+    <p>Whether you're a beginner or a pro, this event is your chance to showcase your skills, learn new things, and connect with tech enthusiasts globally.</p>
+  </section>
+
+  <!-- Schedule Section -->
+  <section class="schedule" id="schedule">
+    <h2>Event Schedule</h2>
+    <ul>
+      <li><strong>June 20</strong>: Kickoff & Team Formation</li>
+      <li><strong>June 21</strong>: Hacking Continues + Mentorship</li>
+      <li><strong>June 22</strong>: Final Submission & Judging</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 HackSphere. All rights reserved.</p>
+  </footer>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    function updateCountdown() {
+      const targetDate = new Date("June 20, 2025 09:00:00").getTime();
+      const now = new Date().getTime();
+      const timeLeft = targetDate - now;
+
+      if (timeLeft <= 0) {
+        document.getElementById("countdown").innerHTML = "HackSphere 2025 has started!";
+        return;
+      }
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = String(days).padStart(2, '0');
+      document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown(); // Run once on load
+    setInterval(updateCountdown, 1000); // Update every second
+  </script>
+
+</body>
+</html>
