@@ -1,55 +1,70 @@
-# 🚀 Internship Task – Landing Page Challenge
+# Getting Started with Create React App
 
-Design a beautiful, responsive landing page for our fictional global hackathon event using **any tech stack** of your choice. This is your chance to get creative while following a basic brief.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## 📝 Task Description
+In the project directory, you can run:
 
-Create a landing page for our fictional hackathon - **HackSphere 2025**, a global 48-hour hackathon bringing together developers, designers, and creators.
+### `npm start`
 
-### 🎯 Required Sections
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-#### 1. 🔥 Hero Section
-- Event Name: `HackSphere 2025`(fictional)
-- Tagline: _“Code. Create. Conquer.”_
-- Event Date & Location: `June 20–22, 2025 – Online`
-- CTA Button: **Register Now**
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-#### 2. ℹ️ About Section
-- Brief description of the event (1–2 short paragraphs)
+### `npm test`
 
-#### 3. 🔻 Footer
-- Centered text: `© 2025 HackSphere. All rights reserved.`
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `npm run build`
 
-## 💡 Guidelines
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- You can use **any tech stack** of your choice. (Using any framework gets more weightage, eg: React, Svelte, etc.)
-- Feel free to add **extra sections** like FAQs, Schedule, Partners, or Contact if you’d like.
-- No backend is required – keep it front-end only.
-- You **can use AI (e.g., ChatGPT)** or **Google** to help with ideas, design, or code.
-- Keep it **simple and clean**.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## 🔧 Submission Instructions
+### `npm run eject`
 
-1. **Fork** this repository.
-2. Build your project inside a folder with your name.
-3. Once you're done, **create a Pull Request**.
-4. Make sure your code is working, and your landing page opens correctly in the browser.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
----
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## 🧑‍💻 Need Help?
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-If you get stuck or have questions:
-- Use Google or AI tools like ChatGPT
-- Or feel free to **reach out to us** for support!
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
----
+## Learn More
 
-## 🙌 Good Luck!
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
