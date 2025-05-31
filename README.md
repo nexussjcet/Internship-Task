@@ -2,6 +2,7 @@
 
 Design a beautiful, responsive landing page for our fictional global hackathon event using **any tech stack** of your choice. This is your chance to get creative while following a basic brief.
 
+
 ---
 
 ## 📝 Task Description
