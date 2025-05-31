@@ -1,0 +1,97 @@
+/* ===== Google Fonts ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* ===== Hero Section ===== */
+  .hero-section {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 100px 0;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .hero-tagline {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .hero-date {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn-register {
+    background: white;
+    color: #6e8efb;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); 
+  }
+  
+  .btn-register:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ===== About Section ===== */
+  .about-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+  }
+  .about-section {
+    padding: 80px 0;
+    background: #f8f9fa; /* Light gray background */
+  }
+  
+  .about-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  /* ===== Footer ===== */
+  .footer-section {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  /* ===== Mobile Responsiveness ===== */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    .hero-tagline {
+      font-size: 1.4rem;
+    }
+  }
