@@ -82,7 +82,7 @@ const About: React.FC = () => {
                 How do teams work?
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                You have the flexibility to hack solo or team up with up to 3 other participants. Don't have a team? Join our team formation event on the first day to find your perfect match!
+                You have the flexibility to hack solo or team up with up to 3 other participants(Team of 4). Don't have a team? Join our team formation event on the first day to find your perfect match!
               </p>
             </div>
             <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">

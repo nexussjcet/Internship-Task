@@ -37,9 +37,6 @@ const Footer: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-300">
               © 2025 HackSphere. All rights reserved.
             </p>
-            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 flex items-center justify-center">
-              Made with <Heart size={16} className="mx-1 text-red-500" /> for creators worldwide
-            </p>
           </div>
         </div>
       </div>
