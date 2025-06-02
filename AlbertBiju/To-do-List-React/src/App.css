@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+}
+
+header {
+  text-align: center;
+  margin: 10px 0;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive; /* Fancy handwritten font */
+  font-size: 4rem;
+  color: #000206;  /* Solid color instead of gradient */
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  margin: 0;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 0; 
+  background: #f0f2f5;
+  box-sizing: border-box;
+}
+
+.app {
+  margin-top: 20px;                   
+  text-align: center;                   
+  background: white;                  
+  padding: 30px 30px;                   
+  border-radius: 12px;                  
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+  width: 90%;                           
+  max-width: 500px;                     
+  margin-left: auto;                 
+  margin-right: auto;                   
+}
+
+
+
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  height: 300px;        
+  width: 100%;
+  max-width: 450px;
+
+  overflow-y: auto;
+  padding: 8px 8px;   
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+
+.task {
+  background-color: #FFF8E1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  text-align: left;
+}
+
+.task.important {
+  background-color: #FFA500;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #666;
+}
+
+/* Button */
+.new-task-button {
+  background-color: #02020c;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.new-task-button:hover {
+  background-color: #005fcc;
+}
+

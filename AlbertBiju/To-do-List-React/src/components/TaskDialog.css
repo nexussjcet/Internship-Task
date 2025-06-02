@@ -1,0 +1,73 @@
+/* Dialog Overlay */
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Dialog Box */
+.dialog-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+/* Textarea for task input */
+.dialog-box textarea {
+  width: 100%;
+  height: 60px; /* height you wanted */
+  background-color: #f0f0f0; /* light grey background */
+  color: black;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  
+  font-family: inherit;
+  scroll-behavior: none;
+}
+.dialog-box textarea::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+/* Checkbox */
+.checkbox-label {
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+}
+
+/* Button */
+.dialog-box button {
+  background-color: #02020c;
+  color: white;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dialog-box button:hover {
+  background-color: #929198;
+}
+
+.dialog-box button:active {
+  background-color: #3730a3;
+}
