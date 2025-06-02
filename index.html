@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackSphere 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #0e0e2c;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+    .btn {
+      background: #ff6b6b;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      margin-top: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #ff4757;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00c6ff;
+    }
+    .faq-item, .schedule-item {
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #1c1c3c;
+    }
+    a {
+      color: #00c6ff;
+    }
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 99;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    #scrollTopBtn:hover {
+      background-color: #ff4757;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HackSphere 2025</h1>
+    <p>“Code. Create. Conquer.”</p>
+    <p>June 20–22, 2025 – Online</p>
+    <div class="countdown" id="countdown"></div>
+    <button class="btn">Register Now</button>
+  </header>
+
+  <section>
+    <h2>About HackSphere</h2>
+    <p>HackSphere 2025 is a global 48-hour hackathon bringing together developers, designers, and creators to build, innovate, and push boundaries. Whether you're a seasoned coder or just starting out, there's a space for everyone here.</p>
+    <p>Join us for a weekend of inspiration, collaboration, and creative breakthroughs. Expect workshops, networking, mentorships, and exciting prizes!</p>
+  </section>
+
+  <section>
+    <h2>Schedule</h2>
+    <div class="schedule-item">
+      <strong>June 20:</strong> Opening Ceremony, Team Formation, Hackathon Begins
+    </div>
+    <div class="schedule-item">
+      <strong>June 21:</strong> Mentorship, Workshops, Development Continues
+    </div>
+    <div class="schedule-item">
+      <strong>June 22:</strong> Final Submission, Judging, Closing Ceremony
+    </div>
+  </section>
+
+  <section>
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      <strong>Who can participate?</strong>
+      <p>Anyone with a passion for tech and innovation!</p>
+    </div>
+    <div class="faq-item">
+      <strong>Is there any registration fee?</strong>
+      <p>Nope! It's completely free.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Do I need a team?</strong>
+      <p>You can join with a team or form one during the event.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Partners</h2>
+    <p>Powered by Techverse, InnovateX, and CodeCloud.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: contact@hacksphere.io</p>
+    <p>Twitter: <a href="https://twitter.com/HackSphere" target="_blank">@HackSphere</a></p>
+    <p>Instagram: <a href="https://instagram.com/hacksphere_hackathon" target="_blank">@hacksphere_hackathon</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/company/hacksphere" target="_blank">HackSphere</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 HackSphere. All rights reserved.</p>
+  </footer>
+
+  <button id="scrollTopBtn" onclick="scrollToTop()">Top</button>
+
+  <script>
+    // Countdown timer
+    const countdown = document.getElementById('countdown');
+    const eventDate = new Date('June 20, 2025 00:00:00').getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `Event starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        countdown.innerHTML = 'The event has started!';
+      }
+    };
+
+    setInterval(updateCountdown, 1000);
+
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
