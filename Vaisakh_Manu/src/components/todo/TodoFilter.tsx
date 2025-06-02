@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTodo, type FilterType } from '@/context/TodoContext';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';

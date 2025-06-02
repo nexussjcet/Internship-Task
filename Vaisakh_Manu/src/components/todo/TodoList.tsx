@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTodo } from '@/context/TodoContext';
 import { TodoItem } from './TodoItem';
 import { ClipboardList } from 'lucide-react';
