@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "prebuild": "chmod -R +x node_modules/.bin",
-  "build": "vite build",
-  "dev": "vite",
-  "preview": "vite preview",
-  "lint": "eslint ."
+    "build": "npx vite build",
+    "dev": "npx vite",
+    "preview": "npx vite preview",
+    "lint": "npx eslint ."
   },
   "dependencies": {
     "react": "^19.1.0",
