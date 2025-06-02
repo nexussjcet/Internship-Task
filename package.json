@@ -1,5 +1,6 @@
 {
   "name": "vite-react-typescript-starter",
+  "homepage": "https://Alaina-1.github.io/Internship-Task",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -76,4 +77,5 @@
     "typescript-eslint": "^8.7.0",
     "vite": "^5.4.8"
   }
+
 }
