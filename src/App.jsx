@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Plus, Trash2, Check, Circle, Edit3, Save, X } from "lucide-react";
+import { Trash2, Check, Edit3, Save, X } from "lucide-react";
 
 const App = () => {
   const [task, setTask] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const storedTodos = localStorage.getItem("todos");
+    return storedTodos ? JSON.parse(storedTodos) : [];
+  });
   const [filter, setFilter] = useState("all");
   const [editingId, setEditingId] = useState(null);
   const [editText, setEditText] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const addTask = () => {
     if (task.trim() === "") return;
@@ -83,7 +90,6 @@ const App = () => {
   return (
     <div className="w-screen min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-6">
       <div className="max-w-2xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
             ✨ To do Master
@@ -91,7 +97,6 @@ const App = () => {
           <p className="text-gray-600">Stay organized and productive</p>
         </div>
 
-        {/* Add Task Input */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-100">
           <div className="flex md:flex-row flex-col gap-3">
             <input
@@ -107,13 +112,10 @@ const App = () => {
               disabled={task.trim() === ""}
               className="md:w-24 h-12 flex-col flex item-center justify-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-1 py-1 text-sm rounded-lg hover:from-blue-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center gap-2 font- shadow-md hover:shadow-lg w-full"
             >
-            
               Add
             </button>
           </div>
         </div>
-
-        {/* Stats and Filters */}
         <div className="bg-white rounded-xl shadow-lg p-4 mb-6 border border-gray-100">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex gap-6 text-sm text-gray-600">
@@ -121,7 +123,6 @@ const App = () => {
               <span className="font-medium text-blue-600">Active: {activeCount}</span>
               <span className="font-medium text-green-600">Done: {completedCount}</span>
             </div>
-            
             <div className="flex gap-2">
               {["all", "active", "completed"].map((filterType) => (
                 <button
@@ -136,16 +137,15 @@ const App = () => {
                   {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
                 </button>
               ))}
+              {completedCount > 0 && (
+                <button
+                  onClick={clearCompleted}
+                  className="text-red-500 hover:text-red-700 text-sm font-medium transition-colors duration-200"
+                >
+                  Clear Completed
+                </button>
+              )}
             </div>
-
-            {completedCount > 0 && (
-              <button
-                onClick={clearCompleted}
-                className="text-red-500 hover:text-red-700 text-sm font-medium transition-colors duration-200"
-              >
-                Clear Completed
-              </button>
-            )}
           </div>
         </div>
 
@@ -157,10 +157,10 @@ const App = () => {
                 {filter === "completed" ? "🎉" : "📝"}
               </div>
               <p className="text-gray-500 text-lg">
-                {filter === "completed" 
-                  ? "No completed tasks yet" 
-                  : filter === "active" 
-                  ? "No active tasks" 
+                {filter === "completed"
+                  ? "No completed tasks yet"
+                  : filter === "active"
+                  ? "No active tasks"
                   : "Your todo list is empty"}
               </p>
               <p className="text-gray-400 text-sm mt-2">
@@ -222,7 +222,6 @@ const App = () => {
                       >
                         {todo.text}
                       </span>
-
                       <div className="flex gap-1">
                         <button
                           onClick={() => startEditing(todo.id, todo.text)}
