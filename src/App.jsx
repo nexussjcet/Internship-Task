@@ -5,6 +5,7 @@ function App() {
     const saved = localStorage.getItem("tasks");
     return saved ? JSON.parse(saved) : [];
   });
+
   const [input, setInput] = useState("");
   const [filter, setFilter] = useState("all");
 
@@ -12,24 +13,28 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  // Add new task
   const addTask = () => {
     if (input.trim() === "") return;
     setTasks([...tasks, { text: input, completed: false }]);
     setInput("");
   };
 
+  // Toggle completed state
   const toggleTask = (index) => {
     const updated = [...tasks];
     updated[index].completed = !updated[index].completed;
     setTasks(updated);
   };
 
+  // Delete a task
   const deleteTask = (index) => {
     const updated = [...tasks];
     updated.splice(index, 1);
     setTasks(updated);
   };
 
+  // Filtered tasks based on view
   const filteredTasks = tasks.filter((task) => {
     if (filter === "active") return !task.completed;
     if (filter === "completed") return task.completed;
@@ -40,7 +45,7 @@ function App() {
     <div className="min-h-screen bg-gray-100 p-4 flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-6">📝 ToDo App</h1>
 
-      {/* Input Section */}
+      {/* Input Field and Add Button */}
       <div className="flex gap-2 mb-4">
         <input
           type="text"
@@ -59,30 +64,17 @@ function App() {
 
       {/* Filter Buttons */}
       <div className="mb-4 flex gap-2">
-        <button
-          onClick={() => setFilter("all")}
-          className={`px-3 py-1 rounded ${
-            filter === "all" ? "bg-blue-500 text-white" : "bg-white border"
-          }`}
-        >
-          All
-        </button>
-        <button
-          onClick={() => setFilter("active")}
-          className={`px-3 py-1 rounded ${
-            filter === "active" ? "bg-blue-500 text-white" : "bg-white border"
-          }`}
-        >
-          Active
-        </button>
-        <button
-          onClick={() => setFilter("completed")}
-          className={`px-3 py-1 rounded ${
-            filter === "completed" ? "bg-blue-500 text-white" : "bg-white border"
-          }`}
-        >
-          Completed
-        </button>
+        {["all", "active", "completed"].map((type) => (
+          <button
+            key={type}
+            onClick={() => setFilter(type)}
+            className={`px-3 py-1 rounded ${
+              filter === type ? "bg-blue-500 text-white" : "bg-white border"
+            }`}
+          >
+            {type.charAt(0).toUpperCase() + type.slice(1)}
+          </button>
+        ))}
       </div>
 
       {/* Task List */}
@@ -90,16 +82,19 @@ function App() {
         {filteredTasks.map((task, index) => (
           <li
             key={index}
-            className="flex justify-between items-center bg-white p-2 mb-2 rounded shadow"
+            className="flex justify-between items-center bg-white p-2 mb-2 rounded shadow transition-all duration-200"
           >
-            <span
-              onClick={() => toggleTask(index)}
-              className={`cursor-pointer ${
-                task.completed ? "line-through text-gray-500" : ""
-              }`}
-            >
-              {task.text}
-            </span>
+            <div className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={task.completed}
+                onChange={() => toggleTask(index)}
+                className="cursor-pointer"
+              />
+              <span className={task.completed ? "line-through text-gray-500" : ""}>
+                {task.text}
+              </span>
+            </div>
             <button
               onClick={() => deleteTask(index)}
               className="text-red-500 font-bold ml-2"
