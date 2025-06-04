@@ -13,7 +13,7 @@ function closeModal() {
 
 function submitForm() {
   const form = document.getElementById('registerForm');
-  // You can add form validation here if needed
+  
   alert('Thank you for registering, ' + form.querySelector('input[type="text"]').value + '!');
   closeModal();
   form.reset();
