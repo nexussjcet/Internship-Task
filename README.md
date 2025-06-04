@@ -1,71 +1,70 @@
-# 🚀 Internship Task – ToDo App using React
+# Getting Started with Create React App
 
-Your challenge is to build a clean, functional, and responsive **ToDo App** using **React**. This task will showcase your understanding of front-end development, component structure, and user interaction.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## 📝 Task Description
+In the project directory, you can run:
 
-Build a ToDo App that allows users to:
+### `npm start`
 
-- Add tasks
-- Mark tasks as completed or not
-- Delete tasks
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 🎯 Required Features
+### `npm test`
 
-### 🧾 Core Requirements
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- ✅ Add new tasks
-- ✅ Display tasks
-- ✅ Mark tasks as complete/incomplete
-- ✅ Delete tasks
+### `npm run build`
 
-### ✨ Bonus (Optional)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- 🔄 Filter tasks: All / Active / Completed
-- 💾 Persist tasks using `localStorage`
-- 📱 Make it mobile responsive
-- 🎨 Use modern UI libraries like [ShadCN UI](https://ui.shadcn.com/) for better design
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## 🛠 Tech Stack Guidelines
+### `npm run eject`
 
-- You **must use React**.
-- You can use **Vite** (recommended for faster setup).
-- You may use **ShadCN UI**, **Tailwind CSS**, or any other modern styling solution.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
----
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## 🧠 Tips
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- Use functional components and hooks (`useState`, `useEffect`, etc.)
-- Keep your components modular
-- Ensure a smooth and simple user experience
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
----
+## Learn More
 
-## 🔧 Submission Instructions
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-1. **Fork** this repository.
-2. Build your app there using Vite + React or any other stack.
-3. Once you're done, **create a Pull Request**.
-4. Make sure your app runs correctly and looks good on different screen sizes.
-5. HOST YOUR WEBSITE WITH PLATFORMS LIKE [VERCEL](https://vercel.com/).
+To learn React, check out the [React documentation](https://reactjs.org/).
 
----
+### Code Splitting
 
-## 💬 Need Help?
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-If you get stuck:
-- Use Google or AI tools like ChatGPT
-- Check out [Vite Docs](https://vitejs.dev/guide/)
-- Explore [ShadCN UI](https://ui.shadcn.com/docs/installation)
-- Get in touch with your team lead or team mates for support.
+### Analyzing the Bundle Size
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## 🙌 Good Luck & Happy Coding!
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
