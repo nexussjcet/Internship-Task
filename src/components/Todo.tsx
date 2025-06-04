@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Todo, FilterType } from '../types/todo';
+import type { Todo, FilterType } from '../types/todo';
 import { Checkbox } from '@radix-ui/react-checkbox';
 import { Trash2 } from 'lucide-react';
 
