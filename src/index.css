@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Space Mono', monospace;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.terminal-frame {
+  position: relative;
+}
+
+.terminal-frame::before,
+.terminal-frame::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #2a384a;
+}
+
+.terminal-frame::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.terminal-frame::after {
+  top: -1px;
+  right: -1px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.terminal-frame > div::before,
+.terminal-frame > div::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #2a384a;
+}
+
+.terminal-frame > div::before {
+  bottom: -1px;
+  left: -1px;
+  border-right: none;
+  border-top: none;
+}
+
+.terminal-frame > div::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+.terminal-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-button {
+  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.terminal-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: #0f9;
+  transition: left 0.3s ease;
+  box-shadow: 0 0 8px #0f9;
+}
+
+.terminal-button:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+}
+
+.terminal-button:hover::after {
+  left: 0;
+}
+
+.terminal-button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: '|';
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+/* Terminal typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1s steps(30, end);
+}
+
+/* Glowing effect animations */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 153, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(0, 255, 153, 0.6); }
+}
+
+@keyframes slide-in {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-out {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(10px); opacity: 0; }
+}
+
+/* Input field focus animation */
+input:focus {
+  border-color: #0f9 !important;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.4);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Task item hover effects */
+.task-item {
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  transform: translateX(2px);
+  box-shadow: -2px 0 0 #0f9;
+}
+
+/* Status message animations */
+.status-message-enter {
+  animation: slide-in 0.3s forwards;
+}
+
+.status-message-exit {
+  animation: slide-out 0.3s forwards;
+}
