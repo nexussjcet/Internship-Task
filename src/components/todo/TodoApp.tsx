@@ -9,7 +9,7 @@ import { useTodoStore } from '@/lib/todo-store';
 import { ThemeToggle } from '../theme-toggle';
 
 function TodoApp() {
-  const { todos, setTodos } = useTodoStore();
+  const { todos} = useTodoStore();
   const [filter, setFilter] = useState<FilterType>('all');
   const [dateTime, setDateTime] = useState(new Date());
 
