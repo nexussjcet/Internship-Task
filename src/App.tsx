@@ -180,7 +180,7 @@ export function App() {
             </div>
           </div>
           
-          {statusMessages.map((msg, index) => (
+          {statusMessages.map((msg) => (
             <div key={msg.id} className="terminal-frame w-full p-px border border-[#2a384a] mb-3">
               <div className="bg-[#0a0f16] p-3 flex justify-between items-center">
                 <p className="text-[#888] text-sm" style={{ fontFamily: 'Space Mono, monospace' }}>{msg.text}</p>
