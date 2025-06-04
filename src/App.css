@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020631;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+
+.app .mainHeading h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.3em;
+}
+
+.app h1,
+h2 {
+  color: white;
+}
+
+.app .subHeading h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ddddff;
+}
+
+/* Input section */
+.app .input {
+  margin-top: 0.8em;
+  width: 20em;
+  height: 2em;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px 8px;
+}
+
+.app .input input {
+  width: 100%;
+  height: 1.6em;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.app i {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: grey;
+  margin-left: 8px;
+  transition: color 0.2s ease;
+}
+
+.app i:hover {
+  color: #555;
+}
+
+/* Todos section */
+.app .todos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.app .todos .todo {
+  margin-top: 0.8em;
+  width: 20em;
+  min-height: 2.2em;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 6px 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.app .todos .todo .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.app .todos .todo .left p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: grey;
+  margin: 0;
+}
+
+/* Completed item style */
+.app .todos .todo .left p.checked {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+/* Clear All Button */
+.clearAll {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.clearAll button {
+  background-color: #ff4b4b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.clearAll button:hover {
+  background-color: #e63939;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
