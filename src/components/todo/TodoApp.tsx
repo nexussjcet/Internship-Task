@@ -4,7 +4,7 @@ import { Clock } from 'lucide-react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 import TodoFilter from './TodoFilter';
-import { Todo, FilterType } from '@/lib/types';
+import {FilterType } from '@/lib/types';
 import { useTodoStore } from '@/lib/todo-store';
 import { ThemeToggle } from '../theme-toggle';
 
