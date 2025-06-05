@@ -101,19 +101,19 @@ export function TodoList() {
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-12 px-4">
-      <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent dark:from-primary/90 dark:to-primary/50">
         Todo App
       </h1>
       
-      <div className="bg-card rounded-lg shadow-lg overflow-hidden mb-8">
-        <div className="p-4 border-b">
+      <div className="bg-card dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-8">
+        <div className="p-4 border-b dark:border-gray-700">
           <TodoForm onSubmit={handleAddTodo} />
         </div>
         
         {todos.length > 0 ? (
           <>
             <motion.ul 
-              className="divide-y divide-border"
+              className="divide-y divide-border dark:divide-gray-700"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
@@ -160,7 +160,7 @@ export function TodoList() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="mx-auto w-20 h-20 bg-muted/30 rounded-full flex items-center justify-center mb-6">
+            <div className="mx-auto w-20 h-20 bg-muted/30 dark:bg-gray-700/30 rounded-full flex items-center justify-center mb-6">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="40" 
@@ -171,13 +171,13 @@ export function TodoList() {
                 strokeWidth="1.5" 
                 strokeLinecap="round" 
                 strokeLinejoin="round"
-                className="text-muted-foreground"
+                className="text-muted-foreground dark:text-gray-400"
               >
                 <path d="M20 6L9 17l-5-5" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">No tasks yet</h3>
-            <p className="text-muted-foreground mb-6">
+            <h3 className="text-xl font-semibold text-foreground dark:text-white mb-2">No tasks yet</h3>
+            <p className="text-muted-foreground dark:text-gray-400 mb-6">
               {filter === 'all' 
                 ? 'Add your first task to get started' 
                 : filter === 'active' 
