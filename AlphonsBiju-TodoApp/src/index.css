@@ -1,0 +1,306 @@
+/* Reset and font smoothing */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Main header */
+.todo-header {
+  height: 100px;
+  background: linear-gradient(135deg, #2e8bc0, #145374);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0f6fc;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 8px rgba(20, 83, 116, 0.4);
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Header subtitle */
+.todo-header p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #d1dbe8;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* Container for sections */
+.todo-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Left and Right panels */
+.todo-left, .todo-right {
+  background-color: #f9fafb;
+  flex-basis: 45%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  overflow-y: auto;
+}
+
+.todo-left:hover, .todo-right:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Todo item container */
+.todo-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(20, 20, 20, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: translateX(5px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Text styling */
+.todo-item-text {
+  flex-grow: 1;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222222;
+  margin-left: 16px;
+  user-select: text;
+}
+
+/* Buttons */
+.complete-btn, .add-btn {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Increased for better tap targets */
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(76, 175, 80, 0.4);
+  font-size: 1.1rem; /* Slightly larger */
+  min-width: 44px; /* Minimum recommended size for accessibility */
+  min-height: 44px;
+}
+
+.complete-btn:hover, .add-btn:hover {
+  background-color: #3a9e3a;
+  box-shadow: 0 5px 15px rgba(58, 158, 58, 0.6);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #e53935, #b71c1c);
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Increased for better tap targets */
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(229, 57, 53, 0.4);
+  font-size: 1.1rem; /* Slightly larger */
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.delete-btn:hover {
+  background-color: #b42b24;
+  box-shadow: 0 5px 15px rgba(180, 43, 36, 0.6);
+}
+
+/* Buttons focus for accessibility */
+.complete-btn:focus,
+.add-btn:focus,
+.delete-btn:focus,
+.todo-form input:focus,
+.cancel-btn:focus {
+  outline: 3px solid #4093b7;
+  outline-offset: 2px;
+}
+
+/* Form */
+.todo-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-form input {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  min-width: 0; /* Fix input shrinking issues */
+}
+
+.todo-form input:focus {
+  border-color: #4093b7;
+  outline: none;
+  box-shadow: 0 0 8px rgba(64, 147, 183, 0.5);
+}
+
+/* Buttons container */
+.todo-form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Cancel button */
+.cancel-btn {
+  background-color: #bbbbbb;
+  color: #333333;
+  border: none;
+  padding: 10px 20px; /* Increased size */
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(170, 170, 170, 0.4);
+  font-size: 1.1rem;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.cancel-btn:hover {
+  background-color: #999999;
+  box-shadow: 0 4px 12px rgba(153, 153, 153, 0.5);
+}
+
+/* Error text */
+.error {
+  color: #e53935;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  text-align: center;
+  user-select: none;
+}
+
+/* Responsive adjustments */
+
+/* Medium to small screens */
+@media (max-width: 900px) {
+  .todo-left, .todo-right {
+    flex-basis: 100%;
+    min-height: auto;
+    max-height: 70vh; /* Allow scroll on smaller screens */
+  }
+  
+  .todo-form input {
+    max-width: 100%;
+  }
+
+  .todo-form-buttons {
+    flex-direction: column;
+  }
+
+  .cancel-btn, .add-btn {
+    width: 100%;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 600px) {
+  .todo-left, .todo-right {
+    max-height: 60vh; /* Less height on smaller phones */
+  }
+}
+
+/* Very small phones (narrower than 400px) */
+@media (max-width: 400px) {
+  .todo-section {
+    margin: 10px;
+    gap: 10px;
+  }
+
+  .todo-header {
+    font-size: 1.8rem;
+    height: 80px;
+  }
+  .todo-header p {
+    font-size: 0.9rem;
+  }
+
+  /* Reduce padding on buttons */
+  .complete-btn, .add-btn, .delete-btn, .cancel-btn {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  /* Inputs smaller padding */
+  .todo-form input {
+    height: 50px;
+    font-size: 1rem;
+    padding: 0 12px;
+  }
+}
+
+/* Larger buttons on bigger screens */
+@media (min-width: 600px) {
+  .complete-btn, .add-btn, .cancel-btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar styling for panels */
+.todo-left::-webkit-scrollbar,
+.todo-right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.todo-left::-webkit-scrollbar-thumb,
+.todo-right::-webkit-scrollbar-thumb {
+  background-color: rgba(64, 147, 183, 0.4);
+  border-radius: 4px;
+}
+
+.todo-left::-webkit-scrollbar-track,
+.todo-right::-webkit-scrollbar-track {
+  background: transparent;
+}
