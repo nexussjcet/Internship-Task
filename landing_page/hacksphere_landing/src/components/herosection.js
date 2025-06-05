@@ -1,0 +1,23 @@
+import React from 'react';
+import Button from './ui/buttons';
+import './herosection.css';
+
+const HeroSection = () => {
+     return (
+          <section className="hero-section">
+               <div className="hero-background">
+                    <div className="floating-element floating-element-1"></div>
+                    <div className="floating-element floating-element-2"></div>
+               </div>
+
+               <h1 className="hero-title">HackSphere 2025</h1>
+               <p className="hero-tagline">Code. Create. Conquer.</p>
+               <p className="hero-details">June 20–22, 2025 – Online</p>
+               <Button variant="primary" size="large">
+                    Register Now
+               </Button>
+          </section>
+     );
+};
+
+export default HeroSection;

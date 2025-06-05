@@ -1,0 +1,114 @@
+.hero-section {
+     position: relative;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 5rem 1.25rem;
+     color: white;
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.hero-background {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     opacity: 0.3;
+}
+
+.floating-element {
+     position: absolute;
+     width: 24rem;
+     height: 24rem;
+     border-radius: 50%;
+     animation: backgroundMove 20s ease-in-out infinite;
+}
+
+.floating-element-1 {
+     top: 20%;
+     left: 20%;
+     background: radial-gradient(circle, rgba(120, 119, 198, 0.3) 0%, transparent 50%);
+}
+
+.floating-element-2 {
+     top: 80%;
+     right: 20%;
+     background: radial-gradient(circle, rgba(255, 119, 198, 0.3) 0%, transparent 50%);
+     animation-direction: reverse;
+}
+
+.hero-title {
+     font-size: 3.5rem;
+     font-weight: bold;
+     margin-bottom: 1.25rem;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+     animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.hero-tagline {
+     font-size: 1.5rem;
+     font-style: italic;
+     margin-bottom: 2rem;
+     animation: fadeInUp 1s ease-out 1s both;
+}
+
+.hero-details {
+     font-size: 1.25rem;
+     margin-bottom: 2.5rem;
+     padding: 1rem 2rem;
+     background: rgba(255, 255, 255, 0.1);
+     border-radius: 9999px;
+     backdrop-filter: blur(10px);
+     animation: fadeInUp 1s ease-out 1.5s both;
+}
+
+@keyframes backgroundMove {
+
+     0%,
+     100% {
+          transform: translateX(0) translateY(0);
+     }
+
+     25% {
+          transform: translateX(10px) translateY(-20px);
+     }
+
+     50% {
+          transform: translateX(-15px) translateY(10px);
+     }
+
+     75% {
+          transform: translateX(5px) translateY(-10px);
+     }
+}
+
+@keyframes fadeInUp {
+     from {
+          opacity: 0;
+          transform: translateY(30px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+@media (max-width: 768px) {
+     .hero-title {
+          font-size: 2.5rem;
+     }
+
+     .hero-tagline {
+          font-size: 1.2rem;
+     }
+
+     .hero-details {
+          font-size: 1rem;
+          padding: 0.75rem 1.25rem;
+     }
+}
