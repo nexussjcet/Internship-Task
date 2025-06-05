@@ -1,0 +1,33 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://f54f5c56-90d8-4461-8fd1-85ef0e970aef-00-1mztr2qdq6mc5.sisko.replit.dev/
+Subject: React + TypeScript + Replit
+Date: Thu, 5 Jun 2025 19:22:16 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--sEOWEmylioV7ZIWmIOnFrkHyFMN5xuoz0ILm71n0gN----"
+
+
+------MultipartBoundary--sEOWEmylioV7ZIWmIOnFrkHyFMN5xuoz0ILm71n0gN----
+Content-Type: text/html
+Content-ID: <frame-5648AF5527EAEFF3BA0AA3D79CB6EE0D@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://f54f5c56-90d8-4461-8fd1-85ef0e970aef-00-1mztr2qdq6mc5.sisko.replit.dev/
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    
+
+    
+    <link rel="icon" type="image/svg+xml" href="https://f54f5c56-90d8-4461-8fd1-85ef0e970aef-00-1mztr2qdq6mc5.sisko.replit.dev/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React + TypeScript + Replit</title>
+  </head>
+  <body>
+    <div id="root"><div><h1>To-do List📝</h1><input placeholder="Enter task" value=""><button>Add</button><div><button>All</button><button>Not Done</button><button>Done</button></div><ul></ul></div></div>
+    
+  
+
+</body></html>
+------MultipartBoundary--sEOWEmylioV7ZIWmIOnFrkHyFMN5xuoz0ILm71n0gN------

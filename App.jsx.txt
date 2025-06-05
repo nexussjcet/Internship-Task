@@ -1,0 +1,65 @@
+import React, { useState } from "react";
+
+function App() {
+  const [todo, setTodo] = useState("");
+  const [list, setList] = useState([]);
+  const [show, setShow] = useState("All");
+
+  function addTodo() {
+    if (todo === "") return;
+    setList([...list, { text: todo, done: false }]);
+    setTodo("");
+  }
+
+  function toggle(index) {
+    const copy = [...list];
+    copy[index].done = !copy[index].done;
+    setList(copy);
+  }
+
+  function remove(index) {
+    const copy = list.filter((_, i) => i !== index);
+    setList(copy);
+  }
+
+  function filterList() {
+    if (show === "Active") return list.filter((item) => !item.done);
+    if (show === "Done") return list.filter((item) => item.done);
+    return list;
+  }
+
+  return (
+    <div>
+      <h1>To-do List📝</h1>
+
+      <input
+        value={todo}
+        onChange={(e) => setTodo(e.target.value)}
+        placeholder="Enter task"
+      />
+      <button onClick={addTodo}>Add</button>
+
+      <div>
+        <button onClick={() => setShow("All📑")}>All</button>
+        <button onClick={() => setShow("Active")}>Not Done</button>
+        <button onClick={() => setShow("Done")}>Done</button>
+      </div>
+
+      <ul>
+        {filterList().map((item, i) => (
+          <li key={i}>
+            <input
+              type="checkbox"
+              checked={item.done}
+              onChange={() => toggle(i)}
+            />
+            {item.text}
+            <button onClick={() => remove(i)}>X</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
