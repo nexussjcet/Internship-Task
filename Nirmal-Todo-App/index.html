@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My ToDo App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./dist/output.css" rel="stylesheet" />
+</head>
+<body class="bg-gradient-to-br from-slate-900 to-gray-800 min-h-screen p-4 font-sans text-white">
+  <div class="max-w-md mx-auto bg-gray-900 p-6 rounded-2xl shadow-xl">
+    <h1 class="text-3xl sm:text-4xl font-bold text-center text-indigo-300 mb-6">My ToDo App</h1>
+
+    <form id="todo-form" class="flex items-center gap-2 mb-6">
+      <input
+        type="text"
+        id="todo-input"
+        class="bg-gray-800 border border-gray-600 placeholder-gray-400 text-white rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full"
+        placeholder="Add a todo..."
+      />
+      <button
+        type="submit"
+        class="bg-indigo-600 text-white px-4 py-2 rounded text-sm hover:bg-indigo-700 transition"
+      >
+        Add
+      </button>
+    </form>
+
+    <ul id="todo-list" class="space-y-3">
+      <!-- Todo items appear here -->
+    </ul>
+  </div>
+
+  <script>
+    const form = document.getElementById("todo-form");
+    const input = document.getElementById("todo-input");
+    const list = document.getElementById("todo-list");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const todoText = input.value.trim();
+
+      if (todoText) {
+        // Create a todo wrapper using fixed-width button alignment
+        const li = document.createElement("li");
+        li.className =
+          "grid grid-cols-[1fr_96px] items-center bg-gray-800 border border-gray-700 rounded px-4 py-2";
+
+        // Todo text
+        const span = document.createElement("span");
+        span.textContent = todoText;
+        span.className = "text-sm cursor-pointer truncate";
+
+        // Toggle strike-through
+        span.addEventListener("click", () => {
+          span.classList.toggle("line-through");
+          span.classList.toggle("text-gray-400");
+        });
+
+        // Delete button
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete";
+        delBtn.className =
+          "bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700 transition w-full";
+        delBtn.addEventListener("click", () => {
+          li.remove();
+        });
+
+        li.appendChild(span);
+        li.appendChild(delBtn);
+        list.appendChild(li);
+        input.value = "";
+      }
+    });
+  </script>
+</body>
+</html>
